@@ -88,7 +88,6 @@
 		061C4ECD2568D257004FFFAE /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E642568D257004FFFAE /* CustomImageView.swift */; };
 		061C4ECE2568D257004FFFAE /* HomePostCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E652568D257004FFFAE /* HomePostCellViewController.swift */; };
 		061C4F0D2568D5C6004FFFAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 061C4F0C2568D5C6004FFFAE /* LaunchScreen.storyboard */; };
-		062F79D025AA679000AA4FD4 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062F79CF25AA679000AA4FD4 /* TabBar.swift */; };
 		06A5E5BA256D9B920039CEF5 /* WidgetResume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A5E5B9256D9B920039CEF5 /* WidgetResume.swift */; };
 		06B43D212568D82A00857DE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06B43D202568D82A00857DE6 /* Assets.xcassets */; };
 		4C899C917E288986DF23EA6D /* Pods_Lighthouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBEC5517EC189512003074D /* Pods_Lighthouse.framework */; };
@@ -177,7 +176,6 @@
 		061C4E642568D257004FFFAE /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		061C4E652568D257004FFFAE /* HomePostCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePostCellViewController.swift; sourceTree = "<group>"; };
 		061C4F0C2568D5C6004FFFAE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		062F79CF25AA679000AA4FD4 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		06A5E5B9256D9B920039CEF5 /* WidgetResume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetResume.swift; sourceTree = "<group>"; };
 		06B43D202568D82A00857DE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06D8E977256CC44400CA2D65 /* Lighthouse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lighthouse.entitlements; sourceTree = "<group>"; };
@@ -382,7 +380,6 @@
 			isa = PBXGroup;
 			children = (
 				061C4E482568D257004FFFAE /* MainTabBarController.swift */,
-				062F79CF25AA679000AA4FD4 /* TabBar.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -607,7 +604,6 @@
 				061C4EB12568D257004FFFAE /* PhotoSelectorHeader.swift in Sources */,
 				061C4EAF2568D257004FFFAE /* PreviewPhotoContainerView.swift in Sources */,
 				061C4E6E2568D257004FFFAE /* ConversationManager.swift in Sources */,
-				062F79D025AA679000AA4FD4 /* TabBar.swift in Sources */,
 				061C4EBB2568D257004FFFAE /* WidgetUserTest.swift in Sources */,
 				061C4E6A2568D257004FFFAE /* Widget.swift in Sources */,
 				061C4EAC2568D257004FFFAE /* CustomAnimationDismissor.swift in Sources */,

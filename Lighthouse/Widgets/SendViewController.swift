@@ -12,7 +12,7 @@ class SendViewController: UIViewController {
     
     private let textView: PlaceholderTextView = {
         let tv = PlaceholderTextView()
-        tv.placeholderLabel.text = "Send a Message..."
+        tv.placeholderLabel.text = "Share Something..."
         tv.placeholderLabel.font = UIFont.systemFont(ofSize: 14)
         tv.font = UIFont.systemFont(ofSize: 14)
         tv.autocorrectionType = .no
