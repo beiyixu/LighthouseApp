@@ -1,8 +1,9 @@
 //
 //  PreviewPhotoContainerView.swift
-//  Bulb
+//  Lighthouse
 //
-//  Created by Beiyi Xu on 10/12/20.
+//  Created by Beiyi Xu on 10/17/20.
+//
 //
 
 import UIKit

@@ -1,4 +1,10 @@
-
+//
+//  MessagesTableViewCell.swift
+//  Lighthouse
+//
+//  Created by Beiyi Xu on 12/17/20.
+//
+//
 
 
 import UIKit

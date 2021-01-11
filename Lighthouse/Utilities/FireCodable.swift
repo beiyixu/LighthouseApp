@@ -1,4 +1,9 @@
-
+//
+//  FireCodable.swift
+//  Lighthouse
+//
+//  Created by Beiyi Xu on 11/20/20.
+//
 
 import UIKit
 

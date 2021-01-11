@@ -1,6 +1,6 @@
 //
 //  Widget.swift
-//  Bulb
+//  Lighthouse
 //
 //  Created by Beiyi Xu on 10/19/20.
 //

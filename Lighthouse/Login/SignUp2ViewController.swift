@@ -1,6 +1,6 @@
 //
 //  SignUp2ViewController.swift
-//  Bulb
+//  Lighthouse
 //
 //  Created by Beiyi Xu on 10/15/20.
 //

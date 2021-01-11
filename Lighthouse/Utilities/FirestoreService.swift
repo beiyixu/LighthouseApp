@@ -1,4 +1,9 @@
-
+//
+//  FirestoreService.swift
+//  Lighthouse
+//
+//  Created by Beiyi Xu on 10/20/20.
+//
 
 import FirebaseFirestore
 import Firebase

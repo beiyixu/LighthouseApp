@@ -1,4 +1,9 @@
-
+//
+//  ImagePickerService.swift
+//  Lighthouse
+//
+//  Created by Beiyi Xu on 10/12/20.
+//
 
 import UIKit
 import Photos

@@ -1,6 +1,6 @@
 //
 //  plusController.swift
-//  Bulb
+//  Lighthouse
 //
 //  Created by Beiyi Xu on 10/16/20.
 //

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		061C4E662568D257004FFFAE /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4DE12568D257004FFFAE /* Comment.swift */; };
 		061C4E672568D257004FFFAE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4DE22568D257004FFFAE /* User.swift */; };
-		061C4E682568D257004FFFAE /* PostAndWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4DE32568D257004FFFAE /* PostAndWidget.swift */; };
 		061C4E692568D257004FFFAE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4DE42568D257004FFFAE /* Post.swift */; };
 		061C4E6A2568D257004FFFAE /* Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4DE52568D257004FFFAE /* Widget.swift */; };
 		061C4E6B2568D257004FFFAE /* UserSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4DE72568D257004FFFAE /* UserSearchCell.swift */; };
@@ -33,7 +32,7 @@
 		061C4E852568D257004FFFAE /* ObjectUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E0C2568D257004FFFAE /* ObjectUser.swift */; };
 		061C4E862568D257004FFFAE /* ObjectConversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E0D2568D257004FFFAE /* ObjectConversation.swift */; };
 		061C4E872568D257004FFFAE /* ObjectMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E0E2568D257004FFFAE /* ObjectMessage.swift */; };
-		061C4E882568D257004FFFAE /* newMessage.wav in Resources */ = {isa = PBXBuildFile; fileRef = 061C4E112568D257004FFFAE /* newMessage.wav */; };
+		061C4E882568D257004FFFAE /* Message.wav in Resources */ = {isa = PBXBuildFile; fileRef = 061C4E112568D257004FFFAE /* Message.wav */; };
 		061C4E982568D257004FFFAE /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E252568D257004FFFAE /* KeyboardHandler.swift */; };
 		061C4E992568D257004FFFAE /* FireCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E272568D257004FFFAE /* FireCodable.swift */; };
 		061C4E9A2568D257004FFFAE /* ImagePickerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E292568D257004FFFAE /* ImagePickerService.swift */; };
@@ -97,7 +96,6 @@
 		054ABA6308B0CB7B081931E7 /* Pods-Lighthouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lighthouse.release.xcconfig"; path = "Target Support Files/Pods-Lighthouse/Pods-Lighthouse.release.xcconfig"; sourceTree = "<group>"; };
 		061C4DE12568D257004FFFAE /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		061C4DE22568D257004FFFAE /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		061C4DE32568D257004FFFAE /* PostAndWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostAndWidget.swift; sourceTree = "<group>"; };
 		061C4DE42568D257004FFFAE /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		061C4DE52568D257004FFFAE /* Widget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Widget.swift; sourceTree = "<group>"; };
 		061C4DE72568D257004FFFAE /* UserSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchCell.swift; sourceTree = "<group>"; };
@@ -121,7 +119,7 @@
 		061C4E0C2568D257004FFFAE /* ObjectUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectUser.swift; sourceTree = "<group>"; };
 		061C4E0D2568D257004FFFAE /* ObjectConversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectConversation.swift; sourceTree = "<group>"; };
 		061C4E0E2568D257004FFFAE /* ObjectMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectMessage.swift; sourceTree = "<group>"; };
-		061C4E112568D257004FFFAE /* newMessage.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = newMessage.wav; sourceTree = "<group>"; };
+		061C4E112568D257004FFFAE /* Message.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Message.wav; sourceTree = "<group>"; };
 		061C4E252568D257004FFFAE /* KeyboardHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
 		061C4E272568D257004FFFAE /* FireCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireCodable.swift; sourceTree = "<group>"; };
 		061C4E292568D257004FFFAE /* ImagePickerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerService.swift; sourceTree = "<group>"; };
@@ -205,7 +203,6 @@
 				061C4E0E2568D257004FFFAE /* ObjectMessage.swift */,
 				061C4DE12568D257004FFFAE /* Comment.swift */,
 				061C4DE22568D257004FFFAE /* User.swift */,
-				061C4DE32568D257004FFFAE /* PostAndWidget.swift */,
 				061C4DE42568D257004FFFAE /* Post.swift */,
 				061C4DE52568D257004FFFAE /* Widget.swift */,
 			);
@@ -355,9 +352,8 @@
 		061C4E5F2568D257004FFFAE /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				061C4E112568D257004FFFAE /* newMessage.wav */,
+				061C4E112568D257004FFFAE /* Message.wav */,
 				061C4DF32568D257004FFFAE /* UILabelGradient.swift */,
-				061C4E272568D257004FFFAE /* FireCodable.swift */,
 				061C4E252568D257004FFFAE /* KeyboardHandler.swift */,
 				061C4E292568D257004FFFAE /* ImagePickerService.swift */,
 				061C4E2A2568D257004FFFAE /* ThemeService.swift */,
@@ -372,6 +368,7 @@
 				061C4E632568D257004FFFAE /* FirebaseUtilities.swift */,
 				061C4E642568D257004FFFAE /* CustomImageView.swift */,
 				061C4E652568D257004FFFAE /* HomePostCellViewController.swift */,
+				061C4E272568D257004FFFAE /* FireCodable.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -504,7 +501,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				061C4E882568D257004FFFAE /* newMessage.wav in Resources */,
+				061C4E882568D257004FFFAE /* Message.wav in Resources */,
 				06B43D212568D82A00857DE6 /* Assets.xcassets in Resources */,
 				061C4E822568D257004FFFAE /* Previews.storyboard in Resources */,
 				061C4E752568D257004FFFAE /* Messages.storyboard in Resources */,
@@ -614,7 +611,6 @@
 				061C4EB72568D257004FFFAE /* HomeTextCell.swift in Sources */,
 				061C4EC32568D257004FFFAE /* UserProfileController.swift in Sources */,
 				061C4EC02568D257004FFFAE /* WidgetLocation.swift in Sources */,
-				061C4E682568D257004FFFAE /* PostAndWidget.swift in Sources */,
 				061C4E812568D257004FFFAE /* MapPreviewController.swift in Sources */,
 				061C4EC12568D257004FFFAE /* UserProfilePhotoGridCell.swift in Sources */,
 				061C4EB42568D257004FFFAE /* MainTabBarController.swift in Sources */,

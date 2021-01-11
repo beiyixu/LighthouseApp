@@ -1,4 +1,9 @@
-
+//
+//  UILabelGradient.swift
+//  Lighthouse
+//
+//  Created by Beiyi Xu on 11/29/20.
+//
 
 import UIKit
 

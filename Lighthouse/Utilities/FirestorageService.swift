@@ -1,4 +1,9 @@
-
+//
+//  PlaceholderTextView.swift
+//  Lighthouse
+//
+//  Created by Beiyi Xu on 10/20/20.
+//
 
 import FirebaseStorage
 import UIKit

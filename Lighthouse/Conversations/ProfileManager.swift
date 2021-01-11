@@ -1,4 +1,10 @@
-
+//
+//  ProfileManager.swift
+//  Lighthouse
+//
+//  Created by Beiyi Xu on 11/21/20.
+//
+//
 
 import Foundation
 

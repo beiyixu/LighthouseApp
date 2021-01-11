@@ -1,6 +1,6 @@
 //
 //  ForgotViewController.swift
-//  Bulb
+//  Lighthouse
 //
 //  Created by Beiyi Xu on 11/19/20.
 //

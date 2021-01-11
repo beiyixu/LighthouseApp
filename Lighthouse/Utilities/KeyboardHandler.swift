@@ -1,4 +1,9 @@
-
+//
+//  KeyboardHandler.swift
+//  Lighthouse
+//
+//  Created by Beiyi Xu on 10/15/20.
+//
 
 import UIKit
 

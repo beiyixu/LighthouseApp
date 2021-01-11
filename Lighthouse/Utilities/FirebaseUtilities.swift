@@ -2,7 +2,7 @@
 //  FirebaseUtilities.swift
 //  Bulb
 //
-//  Created by Beiyi Xu on 10/12/20.
+//  Created by Beiyi Xu on 10/15/20.
 //
 
 import Foundation

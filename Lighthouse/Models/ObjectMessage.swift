@@ -1,3 +1,9 @@
+//
+//  ObjectMessage.swift
+//  Lighthouse
+//
+//  Created by Beiyi Xu on 11/13/20.
+//
 
 
 import UIKit

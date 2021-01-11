@@ -1,4 +1,9 @@
-
+//
+//  ObjectUser.swift
+//  Lighthouse
+//
+//  Created by Beiyi Xu on 11/12/20.
+//
 
 import UIKit
 

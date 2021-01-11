@@ -1,4 +1,10 @@
-
+//
+//  ImagePreviewController.swift
+//  Lighthouse
+//
+//  Created by Beiyi Xu on 12/19/20.
+//
+//
 
 import UIKit
 
