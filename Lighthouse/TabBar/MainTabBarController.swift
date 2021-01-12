@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
+class MainTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,7 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
         let searchNavController = self.templateNavController(unselectedImage: #imageLiteral(resourceName: "search_unselected"), selectedImage: #imageLiteral(resourceName: "search_selected"), rootViewController: UserSearchController(collectionViewLayout: UICollectionViewFlowLayout()))
         let plusNavController = self.templateNavController(unselectedImage: #imageLiteral(resourceName: "plus_unselected"), selectedImage: #imageLiteral(resourceName: "plus_unselected"), rootViewController: plusController())
         let vc = UIStoryboard.initial(storyboard: .conversations)
-        let likeNavController = self.templateNavController(unselectedImage: #imageLiteral(resourceName: "message"), selectedImage: #imageLiteral(resourceName: "message1").withRenderingMode(.alwaysTemplate), rootViewController: vc)
+        let convoNavController = self.templateNavController(unselectedImage: #imageLiteral(resourceName: "message"), selectedImage: #imageLiteral(resourceName: "message1").withRenderingMode(.alwaysTemplate), rootViewController: vc)
 
         let userProfileController = UserProfileController(collectionViewLayout: UICollectionViewFlowLayout())
         let userProfileNavController = self.templateNavController(unselectedImage: #imageLiteral(resourceName: "profile_unselected"), selectedImage: #imageLiteral(resourceName: "profile_selected"), rootViewController: userProfileController)
@@ -40,7 +40,8 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
             userProfileController.user = user
         }
         
-        viewControllers = [homeNavController, searchNavController, plusNavController, likeNavController, userProfileNavController]
+        viewControllers = [homeNavController, convoNavController, userProfileNavController, searchNavController, plusNavController]
+        
     }
     
     
@@ -67,3 +68,9 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
 
 //MARK: - UITabBarControllerDelegate
 
+extension MainTabBarController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        return true
+    }
+    
+}

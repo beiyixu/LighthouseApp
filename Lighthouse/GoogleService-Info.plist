@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>678383759487-scu5tmdchpgsjsgm392orc29lqlm74ij.apps.googleusercontent.com</string>
+	<string>159512595667-h0o8edsb3vn9iarq6ksufgo9bgqt9v22.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.678383759487-scu5tmdchpgsjsgm392orc29lqlm74ij</string>
+	<string>com.googleusercontent.apps.159512595667-h0o8edsb3vn9iarq6ksufgo9bgqt9v22</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAerM__k01dIqhStwP4TeQhSsR2iBdAPgY</string>
+	<string>AIzaSyALNWWpU1PnBe-7JcXbvtJf_h-xBcwcDd8</string>
 	<key>GCM_SENDER_ID</key>
-	<string>678383759487</string>
+	<string>159512595667</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.lighthouse.appdevelopmentt</string>
+	<string>com.lighthouse.appdevelopment</string>
 	<key>PROJECT_ID</key>
-	<string>lighthouse-app-development</string>
+	<string>lighthouse-14a1b</string>
 	<key>STORAGE_BUCKET</key>
-	<string>lighthouse-app-development.appspot.com</string>
+	<string>lighthouse-14a1b.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:678383759487:ios:ccb8f852631c6b0722cf4a</string>
-	<key>DATABASE_URL</key>
-	<string>https://lighthouse-app-development.firebaseio.com</string>
+	<string>1:159512595667:ios:7b4882d9645f67a3015826</string>
 </dict>
 </plist>

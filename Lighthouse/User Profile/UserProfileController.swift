@@ -84,6 +84,7 @@ class UserProfileController: HomePostCellViewController {
         guard let user = user else { return }
         
         if user.uid == Auth.auth().currentUser?.uid {
+            
             navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "gear").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleSettings))
             let navLabel: UILabel = {
                 let label = UILabel()
@@ -98,11 +99,24 @@ class UserProfileController: HomePostCellViewController {
             
             self.navigationItem.titleView = navLabel
         } else {
+            
             let optionsButton = UIBarButtonItem(title: "•••", style: .plain, target: nil, action: nil)
             optionsButton.tintColor = .black
             navigationItem.rightBarButtonItem = optionsButton
-            
             navigationItem.title = user.username
+            let navLabel: UILabel = {
+                let label = UILabel()
+                label.text = user.username
+                label.textColor = .black
+                label.textAlignment = .left
+                label.font = UIFont.boldSystemFont(ofSize: 40)
+                label.textColor = .mainBlue
+                label.translatesAutoresizingMaskIntoConstraints = false
+                return label
+            }()
+            
+            self.navigationItem.titleView = navLabel
+            
             
         }
             

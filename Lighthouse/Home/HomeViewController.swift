@@ -13,7 +13,6 @@ class HomeController: HomePostCellViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavigationBar()
-        
         collectionView?.backgroundColor = .white
         collectionView?.register(HomePostCell.self, forCellWithReuseIdentifier: HomePostCell.cellId)
         collectionView?.register(HomeTextCell.self, forCellWithReuseIdentifier: HomeTextCell.cellId)
