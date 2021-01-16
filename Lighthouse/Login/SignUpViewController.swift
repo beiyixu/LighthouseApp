@@ -77,6 +77,7 @@ class SignUpController: UIViewController, UINavigationControllerDelegate, UIText
         let attributedString = NSMutableAttributedString(string: "By Checking, You Agree to Lighthouse's Privacy Policy")
         attributedString.addAttribute(.link, value: "https://www.lighthouse-app.com/privacy-policy", range: NSRange(location: 26, length: 27))
         l.attributedText = attributedString
+        l.isEditable = false
         return l
     }()
     
