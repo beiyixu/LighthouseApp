@@ -1,6 +1,6 @@
 //
 //  FirebaseUtilities.swift
-//  Bulb
+//  Lighthouse
 //
 //  Created by Beiyi Xu on 10/15/20.
 //
@@ -10,6 +10,7 @@ import Firebase
 import MapKit
 
 extension Auth {
+    //MARK: Auth
     func createUser(withEmail email: String, username: String, password: String, image: UIImage?, completion: @escaping (Error?) -> ()) {
         
         Auth.auth().createUser(withEmail: email, password: password, completion: { (user, err) in
@@ -102,9 +103,10 @@ extension Auth {
 }
 
 extension Storage {
+    //MARK: Storage
     
     fileprivate func uploadUserProfileImage(image: UIImage, completion: @escaping (String) -> ()) {
-        guard let uploadData = image.jpegData(compressionQuality: 1) else { return } //changed from 0.3
+        guard let uploadData = image.jpegData(compressionQuality: 1) else { return }
         
         let storageRef = Storage.storage().reference().child("profile_images").child(NSUUID().uuidString)
         
@@ -126,7 +128,7 @@ extension Storage {
     }
     
     fileprivate func uploadPostImage(image: UIImage, filename: String, completion: @escaping (String) -> ()) {
-        guard let uploadData = image.jpegData(compressionQuality: 1) else { return } //changed from 0.5
+        guard let uploadData = image.jpegData(compressionQuality: 1) else { return }
         
         let storageRef = Storage.storage().reference().child("post_images").child(filename)
         storageRef.putData(uploadData, metadata: nil, completion: { (_, err) in
@@ -169,7 +171,7 @@ extension Storage {
 
 extension Database {
 
-    //MARK: Users
+    //MARK: Database
     
     func fetchUser(withUID uid: String, completion: @escaping (User) -> ()) {
         Database.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
@@ -296,8 +298,6 @@ extension Database {
         }
     }
     
-    //MARK: Posts
-    
     func createPost(withImage image: UIImage, caption: String, completion: @escaping (Error?) -> ()) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
@@ -317,32 +317,6 @@ extension Database {
                 completion(nil)
             }
         }
-    }
-    
-    func createConvo(withUID: String, completion: @escaping (Error?) -> ()) {
-        guard let currentLoggedInUserId = Auth.auth().currentUser?.uid else { return }
-        let ref = Database.database().reference().child("conversations").childByAutoId()
-        ref.updateChildValues(["user1": currentLoggedInUserId, "user2": withUID])
-        
-        guard let convoId = Database.database().reference().child("conversations").childByAutoId().key else {return}
-        
-        let values = [convoId: 1]
-        Database.database().reference().child("conversationz").child(currentLoggedInUserId).updateChildValues(values) { (err, ref) in
-            if let err = err {
-                completion(err)
-                return
-            }
-            
-            let values = [convoId: 1]
-            Database.database().reference().child("conversationz").child(withUID).updateChildValues(values) { (err, ref) in
-                if let err = err {
-                    completion(err)
-                    return
-                }
-                completion(nil)
-            }
-        }
-        
     }
     
     func createPostNoImage(caption: String, completion: @escaping (Error?) -> ()) {

@@ -8,7 +8,7 @@
 import UIKit
 import Firebase
 
-class SignUpController: UIViewController, UINavigationControllerDelegate {
+class SignUpController: UIViewController, UINavigationControllerDelegate, UITextViewDelegate {
 
     private let plusPhotoButton: UIButton = {
         let button = UIButton(type: .system)
@@ -58,6 +58,30 @@ class SignUpController: UIViewController, UINavigationControllerDelegate {
         return tf
     }()
     
+    private lazy var termsButton: UIButton = {
+       let b = UIButton()
+        b.borderWidth = 0.5
+        b.borderColor = .clear
+        b.setImage(UIImage(named: "unchecked"), for: .normal)
+        b.setImage(UIImage(named: "checkmark"), for: .selected)
+        b.isSelected = false
+        b.addTarget(self, action: #selector(checkPressed), for: .touchUpInside)
+        b.addTarget(self, action: #selector(handleTextInputChange), for: .touchUpInside)
+        b.imageView?.contentMode = .scaleAspectFill
+        return b
+        
+    }()
+    
+    private let termsLabel: UITextView = {
+        let l = UITextView()
+        let attributedString = NSMutableAttributedString(string: "By Checking, You Agree to Lighthouse's Privacy Policy")
+        attributedString.addAttribute(.link, value: "https://www.lighthouse-app.com/privacy-policy", range: NSRange(location: 26, length: 27))
+        l.attributedText = attributedString
+        return l
+    }()
+    
+    var agreementSigned = false
+    
     private let signUpButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Continue", for: .normal)
@@ -99,13 +123,20 @@ class SignUpController: UIViewController, UINavigationControllerDelegate {
     }
     
     private func setupInputFields() {
-        let stackView = UIStackView(arrangedSubviews: [usernameTextField, emailTextField, passwordTextField, signUpButton])
+        termsButton.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        termsButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        termsLabel.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        termsLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        let sv = UIStackView(arrangedSubviews: [termsButton, termsLabel])
+        sv.distribution = .fillProportionally
+        sv.axis = .horizontal
+        sv.spacing = 10
+        let stackView = UIStackView(arrangedSubviews: [usernameTextField, emailTextField, passwordTextField, sv, signUpButton])
         stackView.distribution = .fillEqually
         stackView.axis = .vertical
         stackView.spacing = 10
-        
         view.addSubview(stackView)
-        stackView.anchor(top: plusPhotoButton.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, right: view.safeAreaLayoutGuide.rightAnchor, paddingTop: 20, paddingLeft: 40, paddingRight: 40, height: 200)
+        stackView.anchor(top: plusPhotoButton.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, right: view.safeAreaLayoutGuide.rightAnchor, paddingTop: 20, paddingLeft: 40, paddingRight: 40, height: 240)
     }
     
     private func resetInputFields() {
@@ -119,6 +150,22 @@ class SignUpController: UIViewController, UINavigationControllerDelegate {
         
         signUpButton.isEnabled = false
         signUpButton.backgroundColor = UIColor.rgb(red: 149, green: 204, blue: 244)
+    }
+    
+    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+            UIApplication.shared.open(URL)
+            return false
+    }
+    
+    @objc private func checkPressed() {
+        if termsButton.isSelected == true {
+            termsButton.isSelected = false
+            agreementSigned = false
+        } else {
+            termsButton.isSelected = true
+            agreementSigned = true
+        }
+    
     }
     
     @objc private func handleTapOnView(_ sender: UITextField) {
@@ -138,7 +185,7 @@ class SignUpController: UIViewController, UINavigationControllerDelegate {
     }
     
     @objc private func handleTextInputChange() {
-        let isFormValid = emailTextField.text?.isEmpty == false && usernameTextField.text?.isEmpty == false && passwordTextField.text?.isEmpty == false
+        let isFormValid = emailTextField.text?.isEmpty == false && usernameTextField.text?.isEmpty == false && passwordTextField.text?.isEmpty == false && agreementSigned == true
         if isFormValid {
             signUpButton.isEnabled = true
             signUpButton.backgroundColor = UIColor.mainBlue

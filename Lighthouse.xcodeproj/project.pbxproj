@@ -86,9 +86,9 @@
 		061C4ECD2568D257004FFFAE /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E642568D257004FFFAE /* CustomImageView.swift */; };
 		061C4ECE2568D257004FFFAE /* HomePostCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E652568D257004FFFAE /* HomePostCellViewController.swift */; };
 		061C4F0D2568D5C6004FFFAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 061C4F0C2568D5C6004FFFAE /* LaunchScreen.storyboard */; };
-		0642261625AD016600204113 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0642261525AD016600204113 /* GoogleService-Info.plist */; };
 		06A5E5BA256D9B920039CEF5 /* WidgetResume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A5E5B9256D9B920039CEF5 /* WidgetResume.swift */; };
 		06B43D212568D82A00857DE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06B43D202568D82A00857DE6 /* Assets.xcassets */; };
+		06FA30E325B0A58D00A4995D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06FA30E225B0A58D00A4995D /* GoogleService-Info.plist */; };
 		4C899C917E288986DF23EA6D /* Pods_Lighthouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBEC5517EC189512003074D /* Pods_Lighthouse.framework */; };
 /* End PBXBuildFile section */
 
@@ -173,10 +173,10 @@
 		061C4E642568D257004FFFAE /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		061C4E652568D257004FFFAE /* HomePostCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePostCellViewController.swift; sourceTree = "<group>"; };
 		061C4F0C2568D5C6004FFFAE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0642261525AD016600204113 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		06A5E5B9256D9B920039CEF5 /* WidgetResume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetResume.swift; sourceTree = "<group>"; };
 		06B43D202568D82A00857DE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06D8E977256CC44400CA2D65 /* Lighthouse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lighthouse.entitlements; sourceTree = "<group>"; };
+		06FA30E225B0A58D00A4995D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2DCDE10D2568C83000826BF8 /* Lighthouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lighthouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DCDE11E2568C83B00826BF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93B95507A7365F6BAF76E483 /* Pods-Lighthouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lighthouse.debug.xcconfig"; path = "Target Support Files/Pods-Lighthouse/Pods-Lighthouse.debug.xcconfig"; sourceTree = "<group>"; };
@@ -416,8 +416,8 @@
 				061C4E5F2568D257004FFFAE /* Utilities */,
 				061C4E302568D257004FFFAE /* Widgets */,
 				2DCDE11E2568C83B00826BF8 /* Info.plist */,
-				0642261525AD016600204113 /* GoogleService-Info.plist */,
 				06D8E977256CC44400CA2D65 /* Lighthouse.entitlements */,
+				06FA30E225B0A58D00A4995D /* GoogleService-Info.plist */,
 				061C4F0C2568D5C6004FFFAE /* LaunchScreen.storyboard */,
 				06B43D202568D82A00857DE6 /* Assets.xcassets */,
 			);
@@ -507,7 +507,7 @@
 				061C4E752568D257004FFFAE /* Messages.storyboard in Resources */,
 				061C4F0D2568D5C6004FFFAE /* LaunchScreen.storyboard in Resources */,
 				061C4E7F2568D257004FFFAE /* Conversations.storyboard in Resources */,
-				0642261625AD016600204113 /* GoogleService-Info.plist in Resources */,
+				06FA30E325B0A58D00A4995D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -766,14 +766,15 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Lighthouse/Lighthouse.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D449H22KC6;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = KBWVP7PS8A;
 				INFOPLIST_FILE = Lighthouse/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lighthouse.appdevelopment;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lighthouseappdevelopment.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -790,14 +791,15 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Lighthouse/Lighthouse.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D449H22KC6;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = KBWVP7PS8A;
 				INFOPLIST_FILE = Lighthouse/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lighthouse.appdevelopment;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lighthouseappdevelopment.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

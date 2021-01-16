@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>159512595667-h0o8edsb3vn9iarq6ksufgo9bgqt9v22.apps.googleusercontent.com</string>
+	<string>159512595667-rguqi0721qt58g1cu1g5017hfohruuqq.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.159512595667-h0o8edsb3vn9iarq6ksufgo9bgqt9v22</string>
+	<string>com.googleusercontent.apps.159512595667-rguqi0721qt58g1cu1g5017hfohruuqq</string>
 	<key>API_KEY</key>
 	<string>AIzaSyALNWWpU1PnBe-7JcXbvtJf_h-xBcwcDd8</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.lighthouse.appdevelopment</string>
+	<string>com.lighthouseappdevelopment.app</string>
 	<key>PROJECT_ID</key>
 	<string>lighthouse-14a1b</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:159512595667:ios:7b4882d9645f67a3015826</string>
+	<string>1:159512595667:ios:9f7c43f734d2e301015826</string>
+	<key>DATABASE_URL</key>
+	<string>https://lighthouse-14a1b-default-rtdb.firebaseio.com</string>
 </dict>
 </plist>
