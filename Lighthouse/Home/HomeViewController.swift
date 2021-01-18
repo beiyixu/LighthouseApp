@@ -19,7 +19,6 @@ class HomeController: HomePostCellViewController {
         collectionView?.backgroundView = HomeEmptyStateView()
         collectionView?.backgroundView?.alpha = 0.5
         
-        
         NotificationCenter.default.addObserver(self, selector: #selector(handleRefresh), name: NSNotification.Name.updateHomeFeed, object: nil)
         
         let refreshControl = UIRefreshControl()
@@ -163,6 +162,7 @@ class HomeController: HomePostCellViewController {
         }
                 
     }
+    
     
     
 }

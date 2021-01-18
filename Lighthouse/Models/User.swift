@@ -17,6 +17,7 @@ struct User {
     let bio: String
     let instagram: String
     let verified: Bool
+    let token: String
     
     init(uid: String, dictionary: [String: Any]) {
         self.uid = uid
@@ -27,5 +28,6 @@ struct User {
         self.bio = dictionary["bio"] as? String ?? ""
         self.instagram = dictionary["instagram"] as? String ?? ""
         self.verified = dictionary["verified"] as? Bool ?? false
+        self.token = dictionary["token"] as? String ?? ""
     }
 }

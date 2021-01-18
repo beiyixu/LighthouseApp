@@ -14,6 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     let gcmMessageIDKey = "gcm.message_id"
+    var fcm = ""
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
@@ -89,6 +91,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       // the FCM registration token.
       func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         print("APNs token retrieved: \(deviceToken)")
+        Messaging.messaging().apnsToken = deviceToken
 
         // With swizzling disabled you must set the APNs token here.
         // Messaging.messaging().apnsToken = deviceToken
@@ -135,24 +138,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         completionHandler()
       }
+        
     
     
 }
 
 extension AppDelegate : MessagingDelegate {
   // [START refresh_token]
+    
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
     print("Firebase registration token: \(String(describing: fcmToken))")
     
         let dataDict:[String: String] = ["token": fcmToken ]
     NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
-        let user = ObjectUser()
-        user.id = Auth.auth().currentUser?.uid ?? ""
-        user.token = fcmToken
-        UserManager().update(user: user, completion: { result in
-        })
+        fcm = fcmToken
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: sendFcm)
+        print(fcm)
+        
     // TODO: If necessary send token to application server.
     // Note: This callback is fired at each app startup and whenever a new token is generated.
   }
+    
+    
+    func sendFcm() {
+        let user = ObjectUser()
+        if Auth.auth().currentUser?.uid != nil {
+            user.id = Auth.auth().currentUser?.uid ?? ""
+            user.token = fcm
+            UserManager().update(user: user, completion: { result in
+            })
+        }
+    }
   // [END refresh_token]
 }
