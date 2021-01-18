@@ -32,7 +32,6 @@
 		061C4E852568D257004FFFAE /* ObjectUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E0C2568D257004FFFAE /* ObjectUser.swift */; };
 		061C4E862568D257004FFFAE /* ObjectConversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E0D2568D257004FFFAE /* ObjectConversation.swift */; };
 		061C4E872568D257004FFFAE /* ObjectMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E0E2568D257004FFFAE /* ObjectMessage.swift */; };
-		061C4E882568D257004FFFAE /* Message.wav in Resources */ = {isa = PBXBuildFile; fileRef = 061C4E112568D257004FFFAE /* Message.wav */; };
 		061C4E982568D257004FFFAE /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E252568D257004FFFAE /* KeyboardHandler.swift */; };
 		061C4E992568D257004FFFAE /* FireCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E272568D257004FFFAE /* FireCodable.swift */; };
 		061C4E9A2568D257004FFFAE /* ImagePickerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E292568D257004FFFAE /* ImagePickerService.swift */; };
@@ -86,6 +85,8 @@
 		061C4ECD2568D257004FFFAE /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E642568D257004FFFAE /* CustomImageView.swift */; };
 		061C4ECE2568D257004FFFAE /* HomePostCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E652568D257004FFFAE /* HomePostCellViewController.swift */; };
 		061C4F0D2568D5C6004FFFAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 061C4F0C2568D5C6004FFFAE /* LaunchScreen.storyboard */; };
+		06A5175225B64CA0006BD7FB /* Message.wav in Resources */ = {isa = PBXBuildFile; fileRef = 06A5175125B64CA0006BD7FB /* Message.wav */; };
+		06A5175525B64CA7006BD7FB /* newRecordm4r.caf in Resources */ = {isa = PBXBuildFile; fileRef = 06A5175425B64CA7006BD7FB /* newRecordm4r.caf */; };
 		06A5E5BA256D9B920039CEF5 /* WidgetResume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A5E5B9256D9B920039CEF5 /* WidgetResume.swift */; };
 		06B43D212568D82A00857DE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06B43D202568D82A00857DE6 /* Assets.xcassets */; };
 		06FA30E325B0A58D00A4995D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06FA30E225B0A58D00A4995D /* GoogleService-Info.plist */; };
@@ -119,7 +120,6 @@
 		061C4E0C2568D257004FFFAE /* ObjectUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectUser.swift; sourceTree = "<group>"; };
 		061C4E0D2568D257004FFFAE /* ObjectConversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectConversation.swift; sourceTree = "<group>"; };
 		061C4E0E2568D257004FFFAE /* ObjectMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectMessage.swift; sourceTree = "<group>"; };
-		061C4E112568D257004FFFAE /* Message.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Message.wav; sourceTree = "<group>"; };
 		061C4E252568D257004FFFAE /* KeyboardHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
 		061C4E272568D257004FFFAE /* FireCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireCodable.swift; sourceTree = "<group>"; };
 		061C4E292568D257004FFFAE /* ImagePickerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerService.swift; sourceTree = "<group>"; };
@@ -173,6 +173,8 @@
 		061C4E642568D257004FFFAE /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		061C4E652568D257004FFFAE /* HomePostCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePostCellViewController.swift; sourceTree = "<group>"; };
 		061C4F0C2568D5C6004FFFAE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		06A5175125B64CA0006BD7FB /* Message.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Message.wav; sourceTree = "<group>"; };
+		06A5175425B64CA7006BD7FB /* newRecordm4r.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = newRecordm4r.caf; sourceTree = "<group>"; };
 		06A5E5B9256D9B920039CEF5 /* WidgetResume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetResume.swift; sourceTree = "<group>"; };
 		06B43D202568D82A00857DE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06EBA19225B502E90026E786 /* Lighthouse.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Lighthouse.entitlements; sourceTree = "<group>"; };
@@ -352,7 +354,8 @@
 		061C4E5F2568D257004FFFAE /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				061C4E112568D257004FFFAE /* Message.wav */,
+				06A5175125B64CA0006BD7FB /* Message.wav */,
+				06A5175425B64CA7006BD7FB /* newRecordm4r.caf */,
 				061C4DF32568D257004FFFAE /* UILabelGradient.swift */,
 				061C4E252568D257004FFFAE /* KeyboardHandler.swift */,
 				061C4E292568D257004FFFAE /* ImagePickerService.swift */,
@@ -501,10 +504,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				061C4E882568D257004FFFAE /* Message.wav in Resources */,
+				06A5175225B64CA0006BD7FB /* Message.wav in Resources */,
 				06B43D212568D82A00857DE6 /* Assets.xcassets in Resources */,
 				061C4E822568D257004FFFAE /* Previews.storyboard in Resources */,
 				061C4E752568D257004FFFAE /* Messages.storyboard in Resources */,
+				06A5175525B64CA7006BD7FB /* newRecordm4r.caf in Resources */,
 				061C4F0D2568D5C6004FFFAE /* LaunchScreen.storyboard in Resources */,
 				061C4E7F2568D257004FFFAE /* Conversations.storyboard in Resources */,
 				06FA30E325B0A58D00A4995D /* GoogleService-Info.plist in Resources */,
@@ -767,7 +771,7 @@
 				CODE_SIGN_ENTITLEMENTS = Lighthouse/Lighthouse.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = KBWVP7PS8A;
 				INFOPLIST_FILE = Lighthouse/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -794,7 +798,7 @@
 				CODE_SIGN_ENTITLEMENTS = Lighthouse/Lighthouse.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = KBWVP7PS8A;
 				INFOPLIST_FILE = Lighthouse/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

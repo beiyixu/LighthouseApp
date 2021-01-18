@@ -42,7 +42,7 @@ class ConversationManager {
         guard let token = user?.token else { return }
         let paramString: [String : Any] = ["to" : token,
                                            "priority": "high",
-                                           "notification" : ["title" : name, "body" : conversation.lastMessage],
+                                           "notification" : ["title" : name, "body" : conversation.lastMessage, "sound": "newRecordm4r.caf"],
                                            "data" : ["user" : "test_id"]
         ]
         let request = NSMutableURLRequest(url: url as URL)
