@@ -175,7 +175,7 @@
 		061C4F0C2568D5C6004FFFAE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06A5E5B9256D9B920039CEF5 /* WidgetResume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetResume.swift; sourceTree = "<group>"; };
 		06B43D202568D82A00857DE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		06D8E977256CC44400CA2D65 /* Lighthouse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lighthouse.entitlements; sourceTree = "<group>"; };
+		06EBA19225B502E90026E786 /* Lighthouse.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Lighthouse.entitlements; sourceTree = "<group>"; };
 		06FA30E225B0A58D00A4995D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2DCDE10D2568C83000826BF8 /* Lighthouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lighthouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DCDE11E2568C83B00826BF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -416,8 +416,8 @@
 				061C4E5F2568D257004FFFAE /* Utilities */,
 				061C4E302568D257004FFFAE /* Widgets */,
 				2DCDE11E2568C83B00826BF8 /* Info.plist */,
-				06D8E977256CC44400CA2D65 /* Lighthouse.entitlements */,
 				06FA30E225B0A58D00A4995D /* GoogleService-Info.plist */,
+				06EBA19225B502E90026E786 /* Lighthouse.entitlements */,
 				061C4F0C2568D5C6004FFFAE /* LaunchScreen.storyboard */,
 				06B43D202568D82A00857DE6 /* Assets.xcassets */,
 			);
@@ -765,8 +765,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Lighthouse/Lighthouse.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = KBWVP7PS8A;
 				INFOPLIST_FILE = Lighthouse/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -776,6 +777,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lighthouseappdevelopment.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -790,8 +792,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Lighthouse/Lighthouse.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = KBWVP7PS8A;
 				INFOPLIST_FILE = Lighthouse/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -801,6 +804,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lighthouseappdevelopment.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
