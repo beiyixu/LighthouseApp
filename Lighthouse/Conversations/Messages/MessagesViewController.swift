@@ -86,6 +86,7 @@ extension MessagesViewController {
       }
       ConversationManager().create(weakSelf.conversation)
     }
+    
   }
   
   private func fetchUserName() {

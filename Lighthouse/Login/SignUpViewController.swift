@@ -78,6 +78,7 @@ class SignUpController: UIViewController, UINavigationControllerDelegate, UIText
         attributedString.addAttribute(.link, value: "https://www.lighthouse-app.com/privacy-policy", range: NSRange(location: 26, length: 27))
         l.attributedText = attributedString
         l.isEditable = false
+        l.backgroundColor = .white
         return l
     }()
     

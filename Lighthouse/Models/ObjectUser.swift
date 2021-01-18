@@ -15,6 +15,7 @@ class ObjectUser: FireStorageCodable {
   var profilePicLink: String?
   var profilePic: UIImage?
   var password: String?
+    var token: String?
   
   func encode(to encoder: Encoder) throws {
     var container = encoder.container(keyedBy: CodingKeys.self)
@@ -22,6 +23,7 @@ class ObjectUser: FireStorageCodable {
     try container.encodeIfPresent(name, forKey: .name)
     try container.encodeIfPresent(email, forKey: .email)
     try container.encodeIfPresent(profilePicLink, forKey: .profilePicLink)
+    try container.encodeIfPresent(token, forKey: .token)
   }
   
   init() {}
@@ -33,6 +35,7 @@ class ObjectUser: FireStorageCodable {
     name = try container.decodeIfPresent(String.self, forKey: .name)
     email = try container.decodeIfPresent(String.self, forKey: .email)
     profilePicLink = try container.decodeIfPresent(String.self, forKey: .profilePicLink)
+    token = try container.decodeIfPresent(String.self, forKey: .token)
   }
 }
 
@@ -42,5 +45,6 @@ extension ObjectUser {
     case email
     case name
     case profilePicLink
+    case token
   }
 }

@@ -31,8 +31,10 @@ class MessageManager {
         if let id = conversation.isRead.filter({$0.key != UserManager().currentUserID() ?? ""}).first {
           conversation.isRead[id.key] = false
         }
-        ConversationManager().create(conversation)
+        //ConversationManager().create(conversation)
       }
     }
   }
+    
+    
 }

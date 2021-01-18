@@ -22,6 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         window?.backgroundColor = .white
         window?.rootViewController = MainTabBarController()
+        
+        if #available(iOS 13.0, *) {
+            window!.overrideUserInterfaceStyle = .light
+        }
 
         if #available(iOS 10.0, *) {
           // For iOS 10 display notification (sent via APNS)
@@ -142,6 +146,11 @@ extension AppDelegate : MessagingDelegate {
     
         let dataDict:[String: String] = ["token": fcmToken ]
     NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
+        let user = ObjectUser()
+        user.id = Auth.auth().currentUser?.uid ?? ""
+        user.token = fcmToken
+        UserManager().update(user: user, completion: { result in
+        })
     // TODO: If necessary send token to application server.
     // Note: This callback is fired at each app startup and whenever a new token is generated.
   }
