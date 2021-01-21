@@ -81,12 +81,34 @@ extension Auth {
             
         })
         
+        
     }
     
-    func updateUser2(withUID uid: String, firstName: String, lastName: String, bio: String, instagram: String, completion: @escaping (Error?) -> ()) {
+    func updateUser2(withUID uid: String, firstName: String, lastName: String, bio: String, instagram: String, image: UIImage?, completion: @escaping (Error?) -> ()) {
         
         ThemeService.showLoading(true)
-        let dictionaryValues = [ "firstName": firstName, "lastName": lastName, "bio": bio, "instagram": instagram]
+        if let image = image {
+            
+            Storage.storage().uploadUserProfileImage(image: image, completion: { (profileImageUrl) in
+                let dicValues = [ "firstName": firstName, "lastName": lastName, "bio": bio, "profileImageUrl": profileImageUrl]
+                Database.database().reference().child("users").child(uid).updateChildValues(dicValues, withCompletionBlock: { (err, ref) in
+                    ThemeService.showLoading(false)
+                    if let err = err {
+                        completion(err)
+                        return
+                    }
+                    let user = ObjectUser()
+                    user.profilePicLink = profileImageUrl
+                    user.id = uid
+                    UserManager().update(user: user, completion: { result in
+                    })
+                })
+                    completion(nil)
+                    
+                })
+        } else {
+        
+        let dictionaryValues = [ "firstName": firstName, "lastName": lastName, "bio": bio]
         Database.database().reference().child("users").child(uid).updateChildValues(dictionaryValues, withCompletionBlock: { (err, ref) in
             ThemeService.showLoading(false)
             if let err = err {
@@ -96,6 +118,8 @@ extension Auth {
             completion(nil)
             
         })
+        }
+        
         
     }
     

@@ -37,16 +37,18 @@ class SignUp2Controller: UIViewController {
         return tf
     }()
     
-    private lazy var bioTextField: UITextField = {
-        let tf = UITextField()
-        tf.placeholder = "Bio"
+    private lazy var bioTextField: PlaceholderTextView = {
+        let tf = PlaceholderTextView()
+        tf.placeholderLabel.text = "Bio"
+        tf.placeholderLabel.font = UIFont.systemFont(ofSize: 16)
         tf.autocorrectionType = .no
         tf.autocapitalizationType = .none
         tf.backgroundColor = UIColor(white: 0, alpha: 0.03)
-        tf.borderStyle = .roundedRect
-        tf.font = UIFont.systemFont(ofSize: 14)
-        tf.delegate = self
-        tf.addTarget(self, action: #selector(handleTextInputChange), for: .editingChanged)
+        tf.cornerRadius = 15
+        tf.font = UIFont.systemFont(ofSize: 16)
+        tf.borderWidth = 1
+        tf.borderColor = UIColor(white: 0, alpha: 0.03)
+        tf.backgroundColor = UIColor(white: 0, alpha: 0.03)
         return tf
     }()
     
@@ -72,7 +74,11 @@ class SignUp2Controller: UIViewController {
     
     private func setupInputFields() {
         let stackView = UIStackView(arrangedSubviews: [firstNameTextField, lastNameTextField, bioTextField, signUpButton])
-        stackView.distribution = .fillEqually
+        firstNameTextField.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        lastNameTextField.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        bioTextField.heightAnchor.constraint(equalToConstant: 80).isActive = true
+        signUpButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        stackView.distribution = .fillProportionally
         stackView.axis = .vertical
         stackView.spacing = 10
         

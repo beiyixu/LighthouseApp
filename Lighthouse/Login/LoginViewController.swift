@@ -66,6 +66,7 @@ class LoginController: UIViewController {
         tf.autocapitalizationType = .none
         tf.keyboardType = .emailAddress
         tf.placeholder = "Email"
+        tf.textContentType = .username
         tf.backgroundColor = UIColor(white: 0, alpha: 0.03)
         tf.cornerRadius = 5
         tf.borderColor = .mainBlue
@@ -82,6 +83,7 @@ class LoginController: UIViewController {
         tf.placeholder = "Password"
         tf.isSecureTextEntry = true
         tf.backgroundColor = UIColor(white: 0, alpha: 0.03)
+        tf.textContentType = .password
         tf.cornerRadius = 5
         tf.borderColor = .mainBlue
         tf.borderWidth = 0.5

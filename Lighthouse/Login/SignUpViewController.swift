@@ -24,6 +24,7 @@ class SignUpController: UIViewController, UINavigationControllerDelegate, UIText
         tf.autocorrectionType = .no
         tf.autocapitalizationType = .none
         tf.keyboardType = .emailAddress
+        tf.textContentType = .username
         tf.placeholder = "Email"
         tf.backgroundColor = UIColor(white: 0, alpha: 0.03)
         tf.borderStyle = .roundedRect
@@ -53,6 +54,7 @@ class SignUpController: UIViewController, UINavigationControllerDelegate, UIText
         tf.backgroundColor = UIColor(white: 0, alpha: 0.03)
         tf.borderStyle = .roundedRect
         tf.font = UIFont.systemFont(ofSize: 14)
+        tf.textContentType = .newPassword
         tf.delegate = self
         tf.addTarget(self, action: #selector(handleTextInputChange), for: .editingChanged)
         return tf
@@ -83,6 +85,17 @@ class SignUpController: UIViewController, UINavigationControllerDelegate, UIText
     }()
     
     var agreementSigned = false
+    
+    private let errorLabel: UILabel = {
+        let l = UILabel()
+        l.textColor = .red
+        l.isOpaque = true
+        l.backgroundColor = .white
+        l.numberOfLines = 3
+        l.font = UIFont.boldSystemFont(ofSize: 10)
+        l.textAlignment = .center
+        return l
+    }()
     
     private let signUpButton: UIButton = {
         let button = UIButton(type: .system)
@@ -121,7 +134,12 @@ class SignUpController: UIViewController, UINavigationControllerDelegate, UIText
         plusPhotoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         plusPhotoButton.layer.cornerRadius = 140 / 2
         
+        view.addSubview(errorLabel)
+        errorLabel.anchor(top: plusPhotoButton.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 40, paddingRight: 40, height: 0)
+        usernameTextField.delegate = self
+        
         setupInputFields()
+        
     }
     
     private func setupInputFields() {
@@ -129,6 +147,7 @@ class SignUpController: UIViewController, UINavigationControllerDelegate, UIText
         termsButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         termsLabel.widthAnchor.constraint(equalToConstant: 150).isActive = true
         termsLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
         let sv = UIStackView(arrangedSubviews: [termsButton, termsLabel])
         sv.distribution = .fillProportionally
         sv.axis = .horizontal
@@ -138,7 +157,7 @@ class SignUpController: UIViewController, UINavigationControllerDelegate, UIText
         stackView.axis = .vertical
         stackView.spacing = 10
         view.addSubview(stackView)
-        stackView.anchor(top: plusPhotoButton.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, right: view.safeAreaLayoutGuide.rightAnchor, paddingTop: 20, paddingLeft: 40, paddingRight: 40, height: 240)
+        stackView.anchor(top: errorLabel.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, right: view.safeAreaLayoutGuide.rightAnchor, paddingTop: 10, paddingLeft: 40, paddingRight: 40, height: 240)
     }
     
     private func resetInputFields() {
@@ -195,6 +214,7 @@ class SignUpController: UIViewController, UINavigationControllerDelegate, UIText
             signUpButton.isEnabled = false
             signUpButton.backgroundColor = UIColor.rgb(red: 149, green: 204, blue: 244)
         }
+        
     }
     
     @objc private func handleAlreadyHaveAccount() {
@@ -205,7 +225,7 @@ class SignUpController: UIViewController, UINavigationControllerDelegate, UIText
         guard let email = emailTextField.text else { return }
         guard let username = usernameTextField.text else { return }
         guard let password = passwordTextField.text else { return }
-        
+        let userString = username.replacingOccurrences(of: " ", with: "")
         emailTextField.isUserInteractionEnabled = false
         usernameTextField.isUserInteractionEnabled = false
         passwordTextField.isUserInteractionEnabled = false
@@ -213,7 +233,20 @@ class SignUpController: UIViewController, UINavigationControllerDelegate, UIText
         signUpButton.isEnabled = false
         signUpButton.backgroundColor = UIColor.rgb(red: 149, green: 204, blue: 244)
         ThemeService.showLoading(true)
-        Database.database().reference().child("usernames").observeSingleEvent(of: .value, with: { (snapshot) in
+        if userString.count != username.count {
+            errorLabel.text = "Your Username Cannot Include Spaces"
+            errorLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
+            ThemeService.showLoading(false)
+            self.resetInputFields()
+        } else {
+            if username.count >= 20 {
+                errorLabel.text = "Your Username Cannot Exceed 20 Characters"
+                errorLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
+                ThemeService.showLoading(false)
+                self.resetInputFields()
+            } else {
+            
+        Database.database().reference().child("usernames").observeSingleEvent(of: .value, with: { [self] (snapshot) in
             
             guard let userDictionary = snapshot.value as? [String: Any] else { return }
             var userArray = [String]()
@@ -227,6 +260,10 @@ class SignUpController: UIViewController, UINavigationControllerDelegate, UIText
                 Auth.auth().createUser(withEmail: email, username: username, password: password, image: self.profileImage) { (err) in
                     if err != nil {
                         self.resetInputFields()
+                        ThemeService.showLoading(false)
+                        errorLabel.text = "Your Password Must Be Longer Than 6 Characters, Or The Email You Have Entered is Not Formatted Correctly"
+                        errorLabel.font = UIFont.boldSystemFont(ofSize: 8)
+                        errorLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
                         return
                     }
                     ThemeService.showLoading(false)
@@ -235,15 +272,23 @@ class SignUpController: UIViewController, UINavigationControllerDelegate, UIText
                 }
 
             } else {
+                errorLabel.text = "This Username is Already Taken"
+                errorLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
                 ThemeService.showLoading(false)
                 self.resetInputFields()
                 return
             }
         }) { (err) in
             print("Failed to fetch users from database:", err)
+            ThemeService.showLoading(false)
+            self.errorLabel.text = "Failed to fetch users from database"
+            self.errorLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
             return
         }
                 
+    }
+    }
+    
     }
 }
 

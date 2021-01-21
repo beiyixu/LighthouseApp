@@ -49,6 +49,10 @@ extension String {
     guard coordinates.count == 2 else { return nil }
     return CLLocationCoordinate2D(latitude: Double(coordinates.first!)!, longitude: Double(coordinates.last!)!)
   }
+    
+    var isBlank: Bool {
+        return allSatisfy({ $0.isWhitespace })
+    }
 }
 
 
@@ -373,6 +377,7 @@ extension  CLLocationCoordinate2D {
   var string: String {
     return "\(latitude):\(longitude)"
   }
+    
 }
 
 extension NSObject {
