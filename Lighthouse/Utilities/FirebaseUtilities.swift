@@ -70,7 +70,7 @@ extension Auth {
     func updateUser(withUID uid: String, firstName: String, lastName: String, bio: String, completion: @escaping (Error?) -> ()) {
         
         ThemeService.showLoading(true)
-        let dictionaryValues = [ "firstName": firstName, "lastName": lastName, "bio": bio]
+        let dictionaryValues = [ "firstName": firstName, "lastName": lastName, "bio": bio, "verified": false] as [String : Any]
         Database.database().reference().child("users").child(uid).updateChildValues(dictionaryValues, withCompletionBlock: { (err, ref) in
             ThemeService.showLoading(false)
             if let err = err {

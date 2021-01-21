@@ -30,6 +30,15 @@ class UserSearchCell: UICollectionViewCell {
         return label
     }()
     
+    private let verified: UIImageView = {
+       let i = UIImageView()
+        i.image = #imageLiteral(resourceName: "verified").withTintColor(.mainBlue, renderingMode: .automatic)
+        i.isHidden = true
+        i.contentMode = .scaleAspectFill
+        return i
+    }()
+    
+    
     static var cellId = "userSearchCellId"
     
     override init(frame: CGRect) {
@@ -70,14 +79,25 @@ class UserSearchCell: UICollectionViewCell {
         addSubview(usernameLabel)
         usernameLabel.anchor(top: topAnchor, left: profileImageView.rightAnchor, bottom: bottomAnchor, right: rightAnchor, paddingLeft: 8)
         
+        addSubview(verified)
+        verified.anchor(right: rightAnchor, paddingRight: 25, height: 25)
+        verified.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        verified.widthAnchor.constraint(equalTo: verified.heightAnchor).isActive = true
+        
     }
     
     private func configureCell() {
-        usernameLabel.text = user?.username
-        if let profileImageUrl = user?.profileImageUrl {
+        guard let user = user else { return }
+        usernameLabel.text = user.username
+        if let profileImageUrl = user.profileImageUrl {
             profileImageView.loadImage(urlString: profileImageUrl)
         } else {
             profileImageView.image = #imageLiteral(resourceName: "user")
+        }
+        if user.verified == true {
+            verified.isHidden = false
+        } else {
+            verified.isHidden = true
         }
     }
     
