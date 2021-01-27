@@ -121,8 +121,9 @@ class plusController: UIViewController {
     
     @objc private func photoPressed() {
         let layout = UICollectionViewFlowLayout()
-                let photoSelectorController = PhotoSelectorController(collectionViewLayout: layout)
-                let nacController = UINavigationController(rootViewController: photoSelectorController)
+        let photoSelectorController = PhotoSelectorController(collectionViewLayout: layout)
+        let nacController = UINavigationController(rootViewController: photoSelectorController)
+        nacController.modalPresentationStyle = .fullScreen
                 present(nacController, animated: true, completion: nil)
 
     }
@@ -130,6 +131,7 @@ class plusController: UIViewController {
     @objc private func takePressed() {
         let camera = CameraController()
         let nacController = UINavigationController(rootViewController: camera)
+        nacController.modalPresentationStyle = .fullScreen
         present(nacController, animated: true, completion: nil)
     }
   

@@ -80,6 +80,8 @@ class HomePostCellViewController: UICollectionViewController, HomePostCellDelega
                             event.url = URL(string: "https://lighthouse-app.com")
                             event.endDate = Date(timeIntervalSince1970: post.endDate)
                             event.notes = post.caption
+                            let alarm = EKAlarm(relativeOffset: -86400)
+                            event.alarms = [alarm]
                             let eventController = EKEventEditViewController()
                             eventController.event = event
                             eventController.eventStore = self.eventStore

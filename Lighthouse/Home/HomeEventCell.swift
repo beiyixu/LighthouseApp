@@ -38,7 +38,7 @@ class HomeEventCell: UICollectionViewCell {
     
     private lazy var eventButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setImage(#imageLiteral(resourceName: "calendar"), for: .normal)
+        button.setImage(#imageLiteral(resourceName: "calendar").withRenderingMode(.alwaysOriginal), for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
         button.addTarget(self, action: #selector(handleEvent), for: .touchUpInside)
         return button

@@ -46,9 +46,6 @@ class PhotoSelectorController: UICollectionViewController {
     private func fetchPhotos() {
         let allPhotos = PHAsset.fetchAssets(with: .image, options: assetFetchOptions())
         
-        
-        
-        
         DispatchQueue.global().async {
             allPhotos.enumerateObjects { (asset, count, stop) in
                 let imageManager = PHImageManager.default()
@@ -63,6 +60,8 @@ class PhotoSelectorController: UICollectionViewController {
                         if self.selectedImage == nil {
                             self.selectedImage = image
                         }
+                    } else {
+                        ThemeService.showLoading(false)
                     }
                     
                     if count == allPhotos.count - 1 {
