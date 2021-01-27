@@ -16,6 +16,9 @@ class HomePostCellViewController: UICollectionViewController, HomePostCellDelega
     
     var widgets = [Widget]()
     
+    let eventStore = EKEventStore()
+    var time = Date()
+    
     func showEmptyStateViewIfNeeded() {}
     
     //MARK: - HomePostCellDelegate
@@ -64,37 +67,28 @@ class HomePostCellViewController: UICollectionViewController, HomePostCellDelega
     }
     
     func didTapEvent(post: Post) {
-        let program = EKEvent()
         
-        let startDate = Date(timeIntervalSince1970: post.startDate)
-        let endDate = Date(timeIntervalSince1970: post.endDate)
-        program.startDate = startDate
-        program.endDate = endDate
-        program.title = post.title
-        let eventStore = EKEventStore()
-        eventStore.requestAccess(to: .reminder) { (yes, er) in
-            if yes {
-                print("yes")
-            } else {
-                print("no")
-            }
-        }
-        EventsCalendarManager().addEventToCalendar(event: program) { (result) in
-            switch result {
-            case .success:
-                print("ok")
-            case .failure(let error):
-                switch error {
-                case .calendarAccessDeniedOrRestricted:
-                    print("ok")
-                case .eventNotAddedToCalendar:
-                    print("ok")
-                case .eventAlreadyExistsInCalendar:
-                    print("ok")
-                default: ()
-                }
-            }
-        }
+        print(post.startDate)
+              print(post.endDate)
+        
+        eventStore.requestAccess( to: EKEntityType.event, completion:{(granted, error) in
+                    DispatchQueue.main.async {
+                        if (granted) && (error == nil) {
+                            let event = EKEvent(eventStore: self.eventStore)
+                            event.title = post.title
+                            event.startDate = Date(timeIntervalSince1970: post.startDate)
+                            event.url = URL(string: "https://lighthouse-app.com")
+                            event.endDate = Date(timeIntervalSince1970: post.endDate)
+                            event.notes = post.caption
+                            let eventController = EKEventEditViewController()
+                            eventController.event = event
+                            eventController.eventStore = self.eventStore
+                            eventController.editViewDelegate = self
+                            self.present(eventController, animated: true, completion: nil)
+                            
+                        }
+                    }
+                })
     }
     
     func didTapUser(user: User) {
@@ -301,4 +295,12 @@ class HomePostCellViewController: UICollectionViewController, HomePostCellDelega
             }
         }
     }
+}
+
+extension HomePostCellViewController: EKEventEditViewDelegate {
+    func eventEditViewController(_ controller: EKEventEditViewController, didCompleteWith action: EKEventEditViewAction) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
+    
 }

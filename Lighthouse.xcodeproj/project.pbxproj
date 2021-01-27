@@ -91,7 +91,6 @@
 		06B43D212568D82A00857DE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06B43D202568D82A00857DE6 /* Assets.xcassets */; };
 		06F5BF3325C0E6FF0091FFF8 /* CreateEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F5BF3225C0E6FF0091FFF8 /* CreateEventController.swift */; };
 		06F5BF3625C10BE60091FFF8 /* HomeEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F5BF3525C10BE60091FFF8 /* HomeEventCell.swift */; };
-		06F5BF3925C111410091FFF8 /* EventCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F5BF3825C111410091FFF8 /* EventCalendar.swift */; };
 		06FA30E325B0A58D00A4995D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06FA30E225B0A58D00A4995D /* GoogleService-Info.plist */; };
 		4C899C917E288986DF23EA6D /* Pods_Lighthouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBEC5517EC189512003074D /* Pods_Lighthouse.framework */; };
 /* End PBXBuildFile section */
@@ -183,7 +182,6 @@
 		06EBA19225B502E90026E786 /* Lighthouse.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Lighthouse.entitlements; sourceTree = "<group>"; };
 		06F5BF3225C0E6FF0091FFF8 /* CreateEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventController.swift; sourceTree = "<group>"; };
 		06F5BF3525C10BE60091FFF8 /* HomeEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEventCell.swift; sourceTree = "<group>"; };
-		06F5BF3825C111410091FFF8 /* EventCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCalendar.swift; sourceTree = "<group>"; };
 		06FA30E225B0A58D00A4995D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2DCDE10D2568C83000826BF8 /* Lighthouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lighthouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DCDE11E2568C83B00826BF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -380,7 +378,6 @@
 				061C4E642568D257004FFFAE /* CustomImageView.swift */,
 				061C4E652568D257004FFFAE /* HomePostCellViewController.swift */,
 				061C4E272568D257004FFFAE /* FireCodable.swift */,
-				06F5BF3825C111410091FFF8 /* EventCalendar.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -589,7 +586,6 @@
 				061C4EB22568D257004FFFAE /* PhotoSelectorController.swift in Sources */,
 				061C4E772568D257004FFFAE /* MessageTableViewCell.swift in Sources */,
 				061C4E672568D257004FFFAE /* User.swift in Sources */,
-				06F5BF3925C111410091FFF8 /* EventCalendar.swift in Sources */,
 				061C4E662568D257004FFFAE /* Comment.swift in Sources */,
 				061C4ECB2568D257004FFFAE /* Extensions.swift in Sources */,
 				061C4EC72568D257004FFFAE /* UserProfileTextGridCell.swift in Sources */,

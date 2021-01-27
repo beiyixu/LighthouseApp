@@ -362,7 +362,7 @@ extension Database {
         
     }
     
-    func createEvent(caption: String, startDate: String, endDate: String, title: String, completion: @escaping (Error?) -> ()) {
+    func createEvent(caption: String, startDate: Double, endDate: Double, title: String, completion: @escaping (Error?) -> ()) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
         let userPostRef = Database.database().reference().child("posts").child(uid).childByAutoId()

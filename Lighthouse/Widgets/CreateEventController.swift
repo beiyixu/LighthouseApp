@@ -12,8 +12,6 @@ class CreateEventController: UIViewController {
     
     private var startDatePicker = UIDatePicker()
     private var endDatePicker = UIDatePicker()
-    var finalStartDate = String(Date().timeIntervalSince1970)
-    var finalEndDate = String(Date().timeIntervalSince1970)
     
     private let captionView: PlaceholderTextView = {
         let tv = PlaceholderTextView()
@@ -94,8 +92,6 @@ class CreateEventController: UIViewController {
         stackView3.distribution = .fillEqually
         containerView.addSubview(stackView3)
         stackView3.anchor(top: containerView.topAnchor, left: containerView.leftAnchor, bottom: containerView.bottomAnchor, right: containerView.rightAnchor, paddingLeft: 15, paddingRight: 15)
-    
-        
     }
     
     @objc private func handleShare() {
@@ -106,7 +102,7 @@ class CreateEventController: UIViewController {
         captionView.isUserInteractionEnabled = false
         titleEvent.isUserInteractionEnabled = false
         
-        Database.database().createEvent(caption: caption, startDate: finalStartDate, endDate: finalEndDate, title: title) { (err) in
+        Database.database().createEvent(caption: caption, startDate: Double(Date().timeIntervalSince1970) - Double(Date().timeIntervalSince(startDatePicker.date)), endDate: Double(Date().timeIntervalSince1970) - Double(Date().timeIntervalSince(endDatePicker.date)), title: title) { (err) in
             if err != nil {
                 self.navigationItem.rightBarButtonItem?.isEnabled = true
                 self.captionView.isUserInteractionEnabled = true
@@ -123,13 +119,6 @@ class CreateEventController: UIViewController {
     @objc private func handleTapOnView(_ sender: UITextField) {
         titleEvent.resignFirstResponder()
         captionView.resignFirstResponder()
-    }
-    
-    @objc private func dateChanged() {
-        let startDate = String(Date().timeIntervalSince(startDatePicker.date))
-        let endDate = String(Date().timeIntervalSince(endDatePicker.date))
-        finalEndDate = endDate
-        finalStartDate = startDate
     }
     
     @objc private func handleCancel() {

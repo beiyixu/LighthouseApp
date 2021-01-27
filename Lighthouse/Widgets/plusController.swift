@@ -136,12 +136,14 @@ class plusController: UIViewController {
     @objc private func sendPressed() {
         let send = SendViewController()
         let nacController = UINavigationController(rootViewController: send)
+        nacController.modalPresentationStyle = .fullScreen
         present(nacController, animated: true, completion: nil)
     }
     
     @objc private func widgetPressed() {
         let create = CreateWidgetController()
         let nacController = UINavigationController(rootViewController: create)
+        nacController.modalPresentationStyle = .fullScreen
         present(nacController, animated: true, completion: nil)
     }
     
