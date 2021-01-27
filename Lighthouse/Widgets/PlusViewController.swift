@@ -1,8 +1,8 @@
 //
-//  plusController.swift
+//  PlusViewController.swift
 //  Lighthouse
 //
-//  Created by Beiyi Xu on 10/16/20.
+//  Created by Beiyi Xu on 1/27/21.
 //
 
 import UIKit
@@ -121,8 +121,9 @@ class plusController: UIViewController {
     
     @objc private func photoPressed() {
         let layout = UICollectionViewFlowLayout()
-                let photoSelectorController = PhotoSelectorController(collectionViewLayout: layout)
-                let nacController = UINavigationController(rootViewController: photoSelectorController)
+        let photoSelectorController = PhotoSelectorController(collectionViewLayout: layout)
+        let nacController = UINavigationController(rootViewController: photoSelectorController)
+        nacController.modalPresentationStyle = .fullScreen
                 present(nacController, animated: true, completion: nil)
 
     }
@@ -130,18 +131,21 @@ class plusController: UIViewController {
     @objc private func takePressed() {
         let camera = CameraController()
         let nacController = UINavigationController(rootViewController: camera)
+        nacController.modalPresentationStyle = .fullScreen
         present(nacController, animated: true, completion: nil)
     }
   
     @objc private func sendPressed() {
         let send = SendViewController()
         let nacController = UINavigationController(rootViewController: send)
+        nacController.modalPresentationStyle = .fullScreen
         present(nacController, animated: true, completion: nil)
     }
     
     @objc private func widgetPressed() {
         let create = CreateWidgetController()
         let nacController = UINavigationController(rootViewController: create)
+        nacController.modalPresentationStyle = .fullScreen
         present(nacController, animated: true, completion: nil)
     }
     

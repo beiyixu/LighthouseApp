@@ -43,7 +43,6 @@
 		061C4EA02568D257004FFFAE /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E2F2568D257004FFFAE /* LocationService.swift */; };
 		061C4EA12568D257004FFFAE /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E312568D257004FFFAE /* SendViewController.swift */; };
 		061C4EA22568D257004FFFAE /* CreateWidgetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E322568D257004FFFAE /* CreateWidgetController.swift */; };
-		061C4EA32568D257004FFFAE /* PlusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E332568D257004FFFAE /* PlusController.swift */; };
 		061C4EA42568D257004FFFAE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E352568D257004FFFAE /* SignUpViewController.swift */; };
 		061C4EA52568D257004FFFAE /* SignUp2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E362568D257004FFFAE /* SignUp2ViewController.swift */; };
 		061C4EA62568D257004FFFAE /* ForgotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E372568D257004FFFAE /* ForgotViewController.swift */; };
@@ -85,6 +84,7 @@
 		061C4ECD2568D257004FFFAE /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E642568D257004FFFAE /* CustomImageView.swift */; };
 		061C4ECE2568D257004FFFAE /* HomePostCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E652568D257004FFFAE /* HomePostCellViewController.swift */; };
 		061C4F0D2568D5C6004FFFAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 061C4F0C2568D5C6004FFFAE /* LaunchScreen.storyboard */; };
+		0677279225C1E42500CC4ECC /* PlusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0677279125C1E42500CC4ECC /* PlusViewController.swift */; };
 		06A5175225B64CA0006BD7FB /* Message.wav in Resources */ = {isa = PBXBuildFile; fileRef = 06A5175125B64CA0006BD7FB /* Message.wav */; };
 		06A5175525B64CA7006BD7FB /* newRecordm4r.caf in Resources */ = {isa = PBXBuildFile; fileRef = 06A5175425B64CA7006BD7FB /* newRecordm4r.caf */; };
 		06A5E5BA256D9B920039CEF5 /* WidgetResume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A5E5B9256D9B920039CEF5 /* WidgetResume.swift */; };
@@ -133,7 +133,6 @@
 		061C4E2F2568D257004FFFAE /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		061C4E312568D257004FFFAE /* SendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
 		061C4E322568D257004FFFAE /* CreateWidgetController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateWidgetController.swift; sourceTree = "<group>"; };
-		061C4E332568D257004FFFAE /* PlusController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusController.swift; sourceTree = "<group>"; };
 		061C4E352568D257004FFFAE /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		061C4E362568D257004FFFAE /* SignUp2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp2ViewController.swift; sourceTree = "<group>"; };
 		061C4E372568D257004FFFAE /* ForgotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +174,7 @@
 		061C4E642568D257004FFFAE /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		061C4E652568D257004FFFAE /* HomePostCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePostCellViewController.swift; sourceTree = "<group>"; };
 		061C4F0C2568D5C6004FFFAE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0677279125C1E42500CC4ECC /* PlusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusViewController.swift; sourceTree = "<group>"; };
 		06A5175125B64CA0006BD7FB /* Message.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Message.wav; sourceTree = "<group>"; };
 		06A5175425B64CA7006BD7FB /* newRecordm4r.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = newRecordm4r.caf; sourceTree = "<group>"; };
 		06A5E5B9256D9B920039CEF5 /* WidgetResume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetResume.swift; sourceTree = "<group>"; };
@@ -275,7 +275,7 @@
 				061C4E312568D257004FFFAE /* SendViewController.swift */,
 				061C4E322568D257004FFFAE /* CreateWidgetController.swift */,
 				06F5BF3225C0E6FF0091FFF8 /* CreateEventController.swift */,
-				061C4E332568D257004FFFAE /* PlusController.swift */,
+				0677279125C1E42500CC4ECC /* PlusViewController.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -572,6 +572,7 @@
 			files = (
 				061C4EB02568D257004FFFAE /* SharePhotoController.swift in Sources */,
 				061C4E6D2568D257004FFFAE /* AppDelegate.swift in Sources */,
+				0677279225C1E42500CC4ECC /* PlusViewController.swift in Sources */,
 				06A5E5BA256D9B920039CEF5 /* WidgetResume.swift in Sources */,
 				061C4EC42568D257004FFFAE /* UserProfileHeader.swift in Sources */,
 				061C4EAB2568D257004FFFAE /* CommentCell.swift in Sources */,
@@ -632,7 +633,6 @@
 				061C4E6B2568D257004FFFAE /* UserSearchCell.swift in Sources */,
 				061C4E6F2568D257004FFFAE /* UserManager.swift in Sources */,
 				061C4ECE2568D257004FFFAE /* HomePostCellViewController.swift in Sources */,
-				061C4EA32568D257004FFFAE /* PlusController.swift in Sources */,
 				061C4EB52568D257004FFFAE /* HomeViewController.swift in Sources */,
 				061C4EA42568D257004FFFAE /* SignUpViewController.swift in Sources */,
 				061C4E872568D257004FFFAE /* ObjectMessage.swift in Sources */,
