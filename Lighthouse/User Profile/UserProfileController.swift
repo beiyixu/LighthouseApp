@@ -187,7 +187,7 @@ class UserProfileController: HomePostCellViewController {
             return cell
         }
         let item = posts[indexPath.item].postType
-        if item == true {
+        if item == 1 {
         if isGridView {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UserProfilePhotoGridCell.cellId, for: indexPath) as! UserProfilePhotoGridCell
             cell.post = posts[indexPath.item]
@@ -264,7 +264,7 @@ extension UserProfileController: UICollectionViewDelegateFlowLayout {
             }
         let item = posts[indexPath.item].postType
         
-        if item == true {
+        if item == 1 {
             
         let dummyCell = HomePostCell(frame: CGRect(x: 0, y: 0, width: view.frame.width - 200, height: 900))
         dummyCell.post = posts[indexPath.item]

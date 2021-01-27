@@ -330,7 +330,7 @@ extension Database {
         guard let postId = userPostRef.key else { return }
         
         Storage.storage().uploadPostImage(image: image, filename: postId) { (postImageUrl) in
-            let values = ["imageUrl": postImageUrl, "caption": caption, "imageWidth": image.size.width, "imageHeight": image.size.height, "creationDate": Date().timeIntervalSince1970, "id": postId, "postType": true] as [String : Any]
+            let values = ["imageUrl": postImageUrl, "caption": caption, "imageWidth": image.size.width, "imageHeight": image.size.height, "creationDate": Date().timeIntervalSince1970, "id": postId, "postType": 1] as [String : Any]
             
             userPostRef.updateChildValues(values) { (err, ref) in
                 if let err = err {
@@ -349,7 +349,26 @@ extension Database {
         let userPostRef = Database.database().reference().child("posts").child(uid).childByAutoId()
         
         guard let postId = userPostRef.key else { return }
-        let values = ["caption": caption, "creationDate": Date().timeIntervalSince1970, "id": postId, "postType": false] as [String : Any]
+        let values = ["caption": caption, "creationDate": Date().timeIntervalSince1970, "id": postId, "postType": 0] as [String : Any]
+            
+            userPostRef.updateChildValues(values) { (err, ref) in
+                if let err = err {
+                    print("Failed to save post to database", err)
+                    completion(err)
+                    return
+                }
+                completion(nil)
+            }
+        
+    }
+    
+    func createEvent(caption: String, startDate: String, endDate: String, title: String, completion: @escaping (Error?) -> ()) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        
+        let userPostRef = Database.database().reference().child("posts").child(uid).childByAutoId()
+        
+        guard let postId = userPostRef.key else { return }
+        let values = ["caption": caption, "startDate": startDate, "endDate": endDate, "title":title, "creationDate": Date().timeIntervalSince1970, "id": postId, "postType": 2] as [String : Any]
             
             userPostRef.updateChildValues(values) { (err, ref) in
                 if let err = err {

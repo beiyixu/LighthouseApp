@@ -43,7 +43,7 @@
 		061C4EA02568D257004FFFAE /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E2F2568D257004FFFAE /* LocationService.swift */; };
 		061C4EA12568D257004FFFAE /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E312568D257004FFFAE /* SendViewController.swift */; };
 		061C4EA22568D257004FFFAE /* CreateWidgetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E322568D257004FFFAE /* CreateWidgetController.swift */; };
-		061C4EA32568D257004FFFAE /* plusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E332568D257004FFFAE /* plusController.swift */; };
+		061C4EA32568D257004FFFAE /* PlusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E332568D257004FFFAE /* PlusController.swift */; };
 		061C4EA42568D257004FFFAE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E352568D257004FFFAE /* SignUpViewController.swift */; };
 		061C4EA52568D257004FFFAE /* SignUp2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E362568D257004FFFAE /* SignUp2ViewController.swift */; };
 		061C4EA62568D257004FFFAE /* ForgotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C4E372568D257004FFFAE /* ForgotViewController.swift */; };
@@ -89,6 +89,9 @@
 		06A5175525B64CA7006BD7FB /* newRecordm4r.caf in Resources */ = {isa = PBXBuildFile; fileRef = 06A5175425B64CA7006BD7FB /* newRecordm4r.caf */; };
 		06A5E5BA256D9B920039CEF5 /* WidgetResume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A5E5B9256D9B920039CEF5 /* WidgetResume.swift */; };
 		06B43D212568D82A00857DE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06B43D202568D82A00857DE6 /* Assets.xcassets */; };
+		06F5BF3325C0E6FF0091FFF8 /* CreateEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F5BF3225C0E6FF0091FFF8 /* CreateEventController.swift */; };
+		06F5BF3625C10BE60091FFF8 /* HomeEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F5BF3525C10BE60091FFF8 /* HomeEventCell.swift */; };
+		06F5BF3925C111410091FFF8 /* EventCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F5BF3825C111410091FFF8 /* EventCalendar.swift */; };
 		06FA30E325B0A58D00A4995D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06FA30E225B0A58D00A4995D /* GoogleService-Info.plist */; };
 		4C899C917E288986DF23EA6D /* Pods_Lighthouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBEC5517EC189512003074D /* Pods_Lighthouse.framework */; };
 /* End PBXBuildFile section */
@@ -131,7 +134,7 @@
 		061C4E2F2568D257004FFFAE /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		061C4E312568D257004FFFAE /* SendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
 		061C4E322568D257004FFFAE /* CreateWidgetController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateWidgetController.swift; sourceTree = "<group>"; };
-		061C4E332568D257004FFFAE /* plusController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = plusController.swift; sourceTree = "<group>"; };
+		061C4E332568D257004FFFAE /* PlusController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusController.swift; sourceTree = "<group>"; };
 		061C4E352568D257004FFFAE /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		061C4E362568D257004FFFAE /* SignUp2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp2ViewController.swift; sourceTree = "<group>"; };
 		061C4E372568D257004FFFAE /* ForgotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +181,9 @@
 		06A5E5B9256D9B920039CEF5 /* WidgetResume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetResume.swift; sourceTree = "<group>"; };
 		06B43D202568D82A00857DE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06EBA19225B502E90026E786 /* Lighthouse.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Lighthouse.entitlements; sourceTree = "<group>"; };
+		06F5BF3225C0E6FF0091FFF8 /* CreateEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventController.swift; sourceTree = "<group>"; };
+		06F5BF3525C10BE60091FFF8 /* HomeEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEventCell.swift; sourceTree = "<group>"; };
+		06F5BF3825C111410091FFF8 /* EventCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCalendar.swift; sourceTree = "<group>"; };
 		06FA30E225B0A58D00A4995D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2DCDE10D2568C83000826BF8 /* Lighthouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lighthouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DCDE11E2568C83B00826BF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -270,7 +276,8 @@
 			children = (
 				061C4E312568D257004FFFAE /* SendViewController.swift */,
 				061C4E322568D257004FFFAE /* CreateWidgetController.swift */,
-				061C4E332568D257004FFFAE /* plusController.swift */,
+				06F5BF3225C0E6FF0091FFF8 /* CreateEventController.swift */,
+				061C4E332568D257004FFFAE /* PlusController.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -326,6 +333,7 @@
 				061C4E4D2568D257004FFFAE /* HomePostCellHeader.swift */,
 				061C4E4E2568D257004FFFAE /* HomeEmptyStateView.swift */,
 				061C4E4F2568D257004FFFAE /* HomePostCell.swift */,
+				06F5BF3525C10BE60091FFF8 /* HomeEventCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -372,6 +380,7 @@
 				061C4E642568D257004FFFAE /* CustomImageView.swift */,
 				061C4E652568D257004FFFAE /* HomePostCellViewController.swift */,
 				061C4E272568D257004FFFAE /* FireCodable.swift */,
+				06F5BF3825C111410091FFF8 /* EventCalendar.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -580,6 +589,7 @@
 				061C4EB22568D257004FFFAE /* PhotoSelectorController.swift in Sources */,
 				061C4E772568D257004FFFAE /* MessageTableViewCell.swift in Sources */,
 				061C4E672568D257004FFFAE /* User.swift in Sources */,
+				06F5BF3925C111410091FFF8 /* EventCalendar.swift in Sources */,
 				061C4E662568D257004FFFAE /* Comment.swift in Sources */,
 				061C4ECB2568D257004FFFAE /* Extensions.swift in Sources */,
 				061C4EC72568D257004FFFAE /* UserProfileTextGridCell.swift in Sources */,
@@ -609,6 +619,7 @@
 				061C4E6A2568D257004FFFAE /* Widget.swift in Sources */,
 				061C4EAC2568D257004FFFAE /* CustomAnimationDismissor.swift in Sources */,
 				061C4E9F2568D257004FFFAE /* DateService.swift in Sources */,
+				06F5BF3625C10BE60091FFF8 /* HomeEventCell.swift in Sources */,
 				061C4EBD2568D257004FFFAE /* WidgetCollection.swift in Sources */,
 				061C4EA72568D257004FFFAE /* LoginViewController.swift in Sources */,
 				061C4E9B2568D257004FFFAE /* ThemeService.swift in Sources */,
@@ -625,13 +636,14 @@
 				061C4E6B2568D257004FFFAE /* UserSearchCell.swift in Sources */,
 				061C4E6F2568D257004FFFAE /* UserManager.swift in Sources */,
 				061C4ECE2568D257004FFFAE /* HomePostCellViewController.swift in Sources */,
-				061C4EA32568D257004FFFAE /* plusController.swift in Sources */,
+				061C4EA32568D257004FFFAE /* PlusController.swift in Sources */,
 				061C4EB52568D257004FFFAE /* HomeViewController.swift in Sources */,
 				061C4EA42568D257004FFFAE /* SignUpViewController.swift in Sources */,
 				061C4E872568D257004FFFAE /* ObjectMessage.swift in Sources */,
 				061C4E9E2568D257004FFFAE /* FirestoreService.swift in Sources */,
 				061C4E692568D257004FFFAE /* Post.swift in Sources */,
 				061C4E762568D257004FFFAE /* MessagesViewController.swift in Sources */,
+				06F5BF3325C0E6FF0091FFF8 /* CreateEventController.swift in Sources */,
 				061C4EBE2568D257004FFFAE /* WidgetView.swift in Sources */,
 				061C4E702568D257004FFFAE /* MessageManager.swift in Sources */,
 				061C4EA22568D257004FFFAE /* CreateWidgetController.swift in Sources */,

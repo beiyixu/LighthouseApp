@@ -7,8 +7,10 @@
 
 import UIKit
 import Firebase
+import EventKit
+import EventKitUI
 
-class HomePostCellViewController: UICollectionViewController, HomePostCellDelegate, HomeTextCellDelegate, UserProfileTextGridCellDelegate, WidgetsCellDelegate {
+class HomePostCellViewController: UICollectionViewController, HomePostCellDelegate, HomeTextCellDelegate, UserProfileTextGridCellDelegate, WidgetsCellDelegate, HomeEventCellDelegate {
     
     var posts = [Post]()
     
@@ -59,6 +61,40 @@ class HomePostCellViewController: UICollectionViewController, HomePostCellDelega
         let commentsController = CommentsController(collectionViewLayout: UICollectionViewFlowLayout())
         commentsController.post = post
         navigationController?.pushViewController(commentsController, animated: true)
+    }
+    
+    func didTapEvent(post: Post) {
+        let program = EKEvent()
+        
+        let startDate = Date(timeIntervalSince1970: post.startDate)
+        let endDate = Date(timeIntervalSince1970: post.endDate)
+        program.startDate = startDate
+        program.endDate = endDate
+        program.title = post.title
+        let eventStore = EKEventStore()
+        eventStore.requestAccess(to: .reminder) { (yes, er) in
+            if yes {
+                print("yes")
+            } else {
+                print("no")
+            }
+        }
+        EventsCalendarManager().addEventToCalendar(event: program) { (result) in
+            switch result {
+            case .success:
+                print("ok")
+            case .failure(let error):
+                switch error {
+                case .calendarAccessDeniedOrRestricted:
+                    print("ok")
+                case .eventNotAddedToCalendar:
+                    print("ok")
+                case .eventAlreadyExistsInCalendar:
+                    print("ok")
+                default: ()
+                }
+            }
+        }
     }
     
     func didTapUser(user: User) {
@@ -123,6 +159,42 @@ class HomePostCellViewController: UICollectionViewController, HomePostCellDelega
     }
     
     func didLike(for cell: HomePostCell) {
+        guard let indexPath = collectionView?.indexPath(for: cell) else { return }
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        
+        var post = posts[indexPath.item]
+        
+        if post.likedByCurrentUser {
+            Database.database().reference().child("likes").child(post.id).child(uid).removeValue { (err, _) in
+                if let err = err {
+                    print("Failed to unlike post:", err)
+                    return
+                }
+                post.likedByCurrentUser = false
+                post.likes = post.likes - 1
+                self.posts[indexPath.item] = post
+                UIView.performWithoutAnimation {
+                    self.collectionView?.reloadItems(at: [indexPath])
+                }
+            }
+        } else {
+            let values = [uid : 1]
+            Database.database().reference().child("likes").child(post.id).updateChildValues(values) { (err, _) in
+                if let err = err {
+                    print("Failed to like post:", err)
+                    return
+                }
+                post.likedByCurrentUser = true
+                post.likes = post.likes + 1
+                self.posts[indexPath.item] = post
+                UIView.performWithoutAnimation {
+                    self.collectionView?.reloadItems(at: [indexPath])
+                }
+            }
+        }
+    }
+    
+    func didLike(for cell: HomeEventCell) {
         guard let indexPath = collectionView?.indexPath(for: cell) else { return }
         guard let uid = Auth.auth().currentUser?.uid else { return }
         

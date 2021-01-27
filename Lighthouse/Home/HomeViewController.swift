@@ -16,6 +16,7 @@ class HomeController: HomePostCellViewController {
         collectionView?.backgroundColor = .white
         collectionView?.register(HomePostCell.self, forCellWithReuseIdentifier: HomePostCell.cellId)
         collectionView?.register(HomeTextCell.self, forCellWithReuseIdentifier: HomeTextCell.cellId)
+        collectionView?.register(HomeEventCell.self, forCellWithReuseIdentifier: HomeEventCell.cellId)
         collectionView?.backgroundView = HomeEmptyStateView()
         collectionView?.backgroundView?.alpha = 0.5
         
@@ -145,13 +146,20 @@ class HomeController: HomePostCellViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        if posts[indexPath.item].postType == true {
+        if posts[indexPath.item].postType == 1 {
         let cell1 = collectionView.dequeueReusableCell(withReuseIdentifier: HomePostCell.cellId, for: indexPath) as! HomePostCell
         if indexPath.item < posts.count {
         cell1.post = posts[indexPath.item]
         }
         cell1.delegate = self
         return cell1
+        } else if posts[indexPath.item].postType == 2 {
+            let cell3 = collectionView.dequeueReusableCell(withReuseIdentifier: HomeEventCell.cellId, for: indexPath) as! HomeEventCell
+            if indexPath.item < posts.count {
+                cell3.post = posts[indexPath.item]
+            }
+            cell3.delegate = self
+            return cell3
         } else {
         let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: HomeTextCell.cellId, for: indexPath) as! HomeTextCell
         if indexPath.item < posts.count {
@@ -179,7 +187,7 @@ extension HomeController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        if posts[indexPath.item].postType == true {
+        if posts[indexPath.item].postType == 1 {
         let dummyCell = HomePostCell(frame: CGRect(x: 0, y: 0, width: view.frame.width - 200, height: 900))
         dummyCell.post = posts[indexPath.item]
         dummyCell.layoutIfNeeded()
@@ -189,6 +197,15 @@ extension HomeController: UICollectionViewDelegateFlowLayout {
         height += 24 + 2 * dummyCell.padding //bookmark button + padding
         height += dummyCell.captionLabel.intrinsicContentSize.height + 8
         return CGSize(width: view.frame.width - 20, height: height + 30)
+        } else if posts[indexPath.item].postType == 2 {
+            let dummyCell = HomeEventCell(frame: CGRect(x: 0, y: 0, width: view.frame.width - 200, height: 500))
+            dummyCell.post = posts[indexPath.item]
+            dummyCell.layoutIfNeeded()
+                
+            var height: CGFloat = dummyCell.header.bounds.height
+            height += 24 + 2 * dummyCell.padding //bookmark button + padding
+            height += dummyCell.captionLabel.intrinsicContentSize.height + 8
+            return CGSize(width: view.frame.width - 20, height: height + 30)
         } else {
         let dummyCell = HomeTextCell(frame: CGRect(x: 0, y: 0, width: view.frame.width - 200, height: 500))
         dummyCell.post = posts[indexPath.item]
