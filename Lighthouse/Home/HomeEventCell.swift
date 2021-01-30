@@ -140,7 +140,7 @@ class HomeEventCell: UICollectionViewCell {
         commentButton.anchor(top: captionLabel.bottomAnchor, right: rightAnchor, paddingTop: padding, paddingRight: padding)
         
         addSubview(eventButton)
-        eventButton.anchor(top: captionLabel.bottomAnchor, left: leftAnchor, paddingTop: padding, paddingLeft: padding)
+        eventButton.anchor(top: captionLabel.bottomAnchor, right: commentButton.leftAnchor, paddingTop: padding - 2, paddingRight: padding)
     }
     
     private func configurePost() {

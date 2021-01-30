@@ -32,7 +32,7 @@ class UserSearchCell: UICollectionViewCell {
     
     private let verified: UIImageView = {
        let i = UIImageView()
-        i.image = #imageLiteral(resourceName: "verified").withTintColor(.mainBlue, renderingMode: .automatic)
+        i.image = #imageLiteral(resourceName: "verified").withTintColor(.systemYellow, renderingMode: .automatic)
         i.isHidden = true
         i.contentMode = .scaleAspectFill
         return i

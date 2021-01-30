@@ -130,11 +130,11 @@ extension Storage {
     //MARK: Storage
     
     fileprivate func uploadUserProfileImage(image: UIImage, completion: @escaping (String) -> ()) {
-        guard let uploadData = image.jpegData(compressionQuality: 1) else { return }
+        guard let resizeImage = image.resize() else { return }
         
         let storageRef = Storage.storage().reference().child("profile_images").child(NSUUID().uuidString)
         
-        storageRef.putData(uploadData, metadata: nil, completion: { (_, err) in
+        storageRef.putData(resizeImage, metadata: nil, completion: { (_, err) in
             if let err = err {
                 print("Failed to upload profile image:", err)
                 return

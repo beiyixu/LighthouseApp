@@ -31,10 +31,6 @@ class UserProfileTextGridCell: UICollectionViewCell {
     let captionLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.layer.cornerRadius = 15.0
-        label.layer.borderWidth = 1
-        label.layer.borderColor = UIColor.mainBlue.cgColor
-        label.layer.masksToBounds = true
         return label
     }()
     
@@ -95,9 +91,16 @@ class UserProfileTextGridCell: UICollectionViewCell {
         self.layer.cornerRadius = 15.0
         self.layer.masksToBounds = false
         self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.contentView.layer.cornerRadius).cgPath
-       
+       let background = UIView()
+        background.layer.borderWidth = 1
+        background.layer.borderColor = UIColor.mainBlue.cgColor
+        background.layer.cornerRadius = 15
+        background.isUserInteractionEnabled = false
         addSubview(captionLabel)
-        captionLabel.anchor(top: topAnchor, left: leftAnchor, right: rightAnchor)
+        captionLabel.anchor(top: topAnchor, left: leftAnchor, right: rightAnchor, paddingLeft: 10, paddingRight: 10)
+        
+        addSubview(background)
+        background.anchor(top: topAnchor, left: leftAnchor, bottom: captionLabel.bottomAnchor, right: rightAnchor)
           
         setActionButtons()
 
@@ -127,11 +130,11 @@ class UserProfileTextGridCell: UICollectionViewCell {
         guard let post = self.post else { return }
         
         let attributedText = NSMutableAttributedString()
-        attributedText.append(NSAttributedString(string: "\n     \(post.caption)", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)]))
+        attributedText.append(NSAttributedString(string: "\n\(post.caption)", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)]))
         attributedText.append(NSAttributedString(string: "\n\n", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 4)]))
         
         let timeAgoDisplay = post.creationDate.timeAgoDisplay()
-        attributedText.append(NSAttributedString(string: "     \(timeAgoDisplay) \n", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor.gray]))
+        attributedText.append(NSAttributedString(string: "\(timeAgoDisplay) \n", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14), NSAttributedString.Key.foregroundColor: UIColor.gray]))
         captionLabel.attributedText = attributedText
     }
     

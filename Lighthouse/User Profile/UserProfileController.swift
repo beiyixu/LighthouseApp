@@ -47,6 +47,7 @@ class UserProfileController: HomePostCellViewController {
         collectionView?.backgroundColor = .white
         collectionView?.register(UserProfileHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: UserProfileHeader.headerId)
         collectionView?.register(UserProfilePhotoGridCell.self, forCellWithReuseIdentifier: UserProfilePhotoGridCell.cellId)
+        collectionView?.register(HomeEventCell.self, forCellWithReuseIdentifier: HomeEventCell.cellId)
         collectionView?.register(HomePostCell.self, forCellWithReuseIdentifier: HomePostCell.cellId)
         collectionView?.register(UserProfileEmptyStateCell.self, forCellWithReuseIdentifier: UserProfileEmptyStateCell.cellId)
         collectionView?.register(HomeTextCell.self, forCellWithReuseIdentifier: HomeTextCell.cellId)
@@ -203,6 +204,12 @@ class UserProfileController: HomePostCellViewController {
             cell.delegate = self
             return cell
         } else {
+            if item == 2 {
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeEventCell.cellId, for: indexPath) as! HomeEventCell
+                cell.post = posts[indexPath.item]
+                cell.delegate = self
+                return cell
+            }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeTextCell.cellId, for: indexPath) as! HomeTextCell
         cell.post = posts[indexPath.item]
         cell.delegate = self
@@ -294,6 +301,7 @@ extension UserProfileController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: view.frame.width, height: 450)
     }
+    
 }
 
 //MARK: - UserProfileHeaderDelegate

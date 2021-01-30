@@ -53,6 +53,14 @@ class HomePostCellHeader: UIView {
         return button
     }()
     
+    private let verified: UIImageView = {
+        let i = UIImageView()
+        i.image = #imageLiteral(resourceName: "verified").withRenderingMode(.automatic).withTintColor(.systemYellow)
+        i.contentMode = .scaleAspectFit
+        i.isHidden = true
+        return i
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         sharedInit()
@@ -72,6 +80,8 @@ class HomePostCellHeader: UIView {
         
         addSubview(optionsButton)
         optionsButton.anchor(top: topAnchor, bottom: bottomAnchor, right: rightAnchor, paddingRight: padding, width: 44)
+        addSubview(verified)
+        verified.anchor(top: topAnchor, bottom: bottomAnchor, right: optionsButton.leftAnchor, width: 20)
         
         addSubview(usernameButton)
         usernameButton.anchor(top: topAnchor, left: userProfileImageView.rightAnchor, bottom: bottomAnchor, paddingLeft: 8)
@@ -88,6 +98,11 @@ class HomePostCellHeader: UIView {
             userProfileImageView.loadImage(urlString: profileImageUrl)
         } else {
             userProfileImageView.image = #imageLiteral(resourceName: "user")
+        }
+        if user.verified == true {
+            verified.isHidden = false
+        } else {
+            verified.isHidden = true
         }
     }
     

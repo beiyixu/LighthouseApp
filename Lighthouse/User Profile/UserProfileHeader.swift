@@ -218,7 +218,7 @@ class UserProfileHeader: UICollectionViewCell {
             followButton.anchor(top: postsLabel.bottomAnchor, left: postsLabel.leftAnchor, right: followingLabel.rightAnchor, paddingTop: 2, height: 34)
         }
         if user.verified == true {
-            let verified = UIImageView(image: #imageLiteral(resourceName: "verified").withTintColor(.mainBlue, renderingMode: .automatic))
+            let verified = UIImageView(image: #imageLiteral(resourceName: "verified").withTintColor(.systemYellow, renderingMode: .automatic))
             verified.contentMode = .scaleAspectFit
             addSubview(verified)
             verified.anchor(top: nameLabel.topAnchor, left: nameLabel.rightAnchor, bottom: nameLabel.bottomAnchor, paddingLeft: 3)
