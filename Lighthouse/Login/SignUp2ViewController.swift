@@ -116,10 +116,8 @@ class SignUp2Controller: UIViewController {
             if err != nil {
                 return
             }
-            guard let mainTabBarController = UIApplication.shared.keyWindow?.rootViewController as? MainTabBarController else { return }
-            mainTabBarController.setupViewControllers()
-            mainTabBarController.selectedIndex = 0
-            self.dismiss(animated: true, completion: nil)
+            let previewController = PreviewController()
+            self.navigationController?.pushViewController(previewController, animated: true)
         }
         
         
@@ -134,7 +132,7 @@ class SignUp2Controller: UIViewController {
     
     
     @objc private func handleTextInputChange() {
-        let isFormValid = firstNameTextField.text?.isEmpty == false && lastNameTextField.text?.isEmpty == false && bioTextField.text?.isEmpty == false
+        let isFormValid = firstNameTextField.text?.isEmpty == false && lastNameTextField.text?.isEmpty == false
         if isFormValid {
             signUpButton.isEnabled = true
             signUpButton.backgroundColor = UIColor.mainBlue

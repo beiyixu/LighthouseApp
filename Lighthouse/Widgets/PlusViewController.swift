@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class plusController: UIViewController {
 
@@ -71,6 +72,7 @@ class plusController: UIViewController {
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         button.contentHorizontalAlignment = .center
         button.addTarget(self, action: #selector(eventPressed), for: .touchUpInside)
+        button.isHidden = true
         return button
     }()
     
@@ -78,7 +80,7 @@ class plusController: UIViewController {
         super.viewDidLoad()
         setNavigation()
         layoutViews()
-       
+       retrieveUser()
     }
     
     func setNavigation() {
@@ -117,6 +119,15 @@ class plusController: UIViewController {
         containerView.addSubview(stackView)
         stackView.anchor(top: containerView.topAnchor, left: containerView.leftAnchor, bottom: containerView.bottomAnchor, right: containerView.rightAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 10, paddingRight: 10)
         
+    }
+    
+    private func retrieveUser() {
+        guard let uid = Auth.auth().currentUser?.uid else {return}
+        Database.database().fetchUser(withUID: uid) { (u) in
+            if u.verified == true {
+                self.createEventButton.isHidden = false
+            }
+        }
     }
     
     @objc private func photoPressed() {

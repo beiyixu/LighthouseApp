@@ -76,8 +76,9 @@ class SignUpController: UIViewController, UINavigationControllerDelegate, UIText
     
     private let termsLabel: UITextView = {
         let l = UITextView()
-        let attributedString = NSMutableAttributedString(string: "By Checking, You Agree to Lighthouse's Privacy Policy")
-        attributedString.addAttribute(.link, value: "https://www.lighthouse-app.com/privacy-policy", range: NSRange(location: 26, length: 27))
+        let attributedString = NSMutableAttributedString(string: "By Checking, You Agree to Lighthouse's Terms And Conditions And Privacy Policy")
+        attributedString.addAttribute(.link, value: "https://www.lighthouse-app.com/terms-and-conditions", range: NSRange(location: 39, length: 20))
+        attributedString.addAttribute(.link, value: "https://www.lighthouse-app.com/privacy-policy", range: NSRange(location: 63, length: 15))
         l.attributedText = attributedString
         l.isEditable = false
         l.backgroundColor = .white
