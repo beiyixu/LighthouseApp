@@ -141,7 +141,7 @@ class PreviewController: UIViewController {
         
         firstImageView.cornerRadius = (view.bounds.width - 100) / 2
         view.addSubview(descriptionTextView)
-        descriptionTextView.anchor(top: firstImageView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 30, paddingLeft: 30, paddingRight: 30, height: 300)
+        descriptionTextView.anchor(top: firstImageView.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 30, paddingLeft: 30, paddingBottom: 80, paddingRight: 30)
 
         view.addSubview(skipButton)
         skipButton.anchor(top: view.topAnchor, right: view.rightAnchor, paddingTop: 40, paddingRight: 20, width: 90, height: 40)
@@ -159,7 +159,7 @@ class PreviewController: UIViewController {
             firstImageView.heightAnchor.constraint(equalTo: firstImageView.widthAnchor).isActive = true
             
             view.addSubview(descriptionTextView)
-            descriptionTextView.anchor(top: firstImageView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 30, paddingLeft: 20, paddingRight: 20, height: 300)
+            descriptionTextView.anchor(top: firstImageView.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 30, paddingLeft: 30, paddingBottom: 80, paddingRight: 30)
         } else if pageControl.currentPage == 1 {
             firstImageView.removeFromSuperview()
             descriptionTextView.removeFromSuperview()
@@ -171,7 +171,7 @@ class PreviewController: UIViewController {
             secondImageView.heightAnchor.constraint(equalTo: secondImageView.widthAnchor).isActive = true
             
             view.addSubview(secondDescriptionTextView)
-            secondDescriptionTextView.anchor(top: secondImageView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 30, paddingLeft: 20, paddingRight: 20, height: 300)
+            secondDescriptionTextView.anchor(top: secondImageView.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 30, paddingLeft: 30, paddingBottom: 80, paddingRight: 30)
             view.addSubview(skipButton)
             skipButton.anchor(top: view.topAnchor, right: view.rightAnchor, paddingTop: 40, paddingRight: 20, width: 90, height: 40)
         } else {
@@ -185,7 +185,7 @@ class PreviewController: UIViewController {
             thirdImageView.heightAnchor.constraint(equalTo: thirdImageView.widthAnchor).isActive = true
             
             view.addSubview(thirdDescriptionTextView)
-            thirdDescriptionTextView.anchor(top: thirdImageView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 30, paddingLeft: 20, paddingRight: 20, height: 300)
+            thirdDescriptionTextView.anchor(top: thirdImageView.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 30, paddingLeft: 30, paddingBottom: 80, paddingRight: 30)
             view.addSubview(skipButton)
             skipButton.anchor(top: view.topAnchor, right: view.rightAnchor, paddingTop: 40, paddingRight: 20, width: 90, height: 40)
         }
