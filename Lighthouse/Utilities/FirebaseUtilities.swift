@@ -90,7 +90,7 @@ extension Auth {
         if let image = image {
             
             Storage.storage().uploadUserProfileImage(image: image, completion: { (profileImageUrl) in
-                let dicValues = [ "firstName": firstName, "lastName": lastName, "bio": bio, "profileImageUrl": profileImageUrl]
+                let dicValues = [ "firstName": firstName, "lastName": lastName, "bio": bio, "profileImageUrl": profileImageUrl, "instagram":instagram]
                 Database.database().reference().child("users").child(uid).updateChildValues(dicValues, withCompletionBlock: { (err, ref) in
                     ThemeService.showLoading(false)
                     if let err = err {
@@ -108,7 +108,7 @@ extension Auth {
                 })
         } else {
         
-        let dictionaryValues = [ "firstName": firstName, "lastName": lastName, "bio": bio]
+            let dictionaryValues = [ "firstName": firstName, "lastName": lastName, "bio": bio, "instagram":instagram]
         Database.database().reference().child("users").child(uid).updateChildValues(dictionaryValues, withCompletionBlock: { (err, ref) in
             ThemeService.showLoading(false)
             if let err = err {
