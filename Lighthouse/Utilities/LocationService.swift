@@ -8,6 +8,8 @@
 import CoreLocation
 
 class LocationService: NSObject, CLLocationManagerDelegate {
+    
+    // Declare Vars
   
   private lazy var manager: CLLocationManager = {
     let manager = CLLocationManager()
@@ -17,6 +19,8 @@ class LocationService: NSObject, CLLocationManagerDelegate {
   }()
   private var hasSentLocation = false
   var completion: CompletionObject<Response>?
+    
+    // Methods
   
   func getLocation(_ closure: CompletionObject<Response>? ) {
     completion = closure

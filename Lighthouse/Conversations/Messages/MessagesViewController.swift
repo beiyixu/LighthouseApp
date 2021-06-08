@@ -10,6 +10,8 @@
 import UIKit
 
 class MessagesViewController: UIViewController, KeyboardHandler {
+    
+    // Declare Vars
   
   //MARK: IBOutlets
   @IBOutlet weak var tableView: UITableView!

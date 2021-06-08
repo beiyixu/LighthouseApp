@@ -16,6 +16,8 @@ protocol HomeTextCellDelegate {
 
 class HomeTextCell: UICollectionViewCell {
     
+    // Declare Vars
+    
     var delegate: HomeTextCellDelegate?
     
     var post: Post? {
@@ -89,6 +91,7 @@ class HomeTextCell: UICollectionViewCell {
             sharedInit()
     }
     
+    // Main
   
     private func sharedInit() {
         
@@ -184,8 +187,6 @@ class HomeTextCell: UICollectionViewCell {
         delegate?.didTapComment(post: post)
     }
 }
-
-//MARK: - HomePostCellHeaderDelegate
 
 extension HomeTextCell: HomePostCellHeaderDelegate {
     

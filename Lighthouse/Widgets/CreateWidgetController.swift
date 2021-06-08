@@ -13,6 +13,8 @@ import PDFKit
 
 
 class CreateWidgetController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, CLLocationManagerDelegate {
+    
+    // Declare Vars
 
     var user: User? {
         didSet {
@@ -696,6 +698,8 @@ class CreateWidgetController: UIViewController, UIPickerViewDelegate, UIPickerVi
     private let scrollView = UIScrollView()
     private let contentView = UIView()
     
+    // Main
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -734,6 +738,8 @@ class CreateWidgetController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         
     }
+    
+    // Methods
     
     @objc private func handleTapOnView(_ sender: UITextField) {
         textView.resignFirstResponder()

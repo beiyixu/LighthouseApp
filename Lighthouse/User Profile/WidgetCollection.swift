@@ -11,6 +11,8 @@ import Firebase
 
 class WidgetChartView: UIViewController, ChartViewDelegate {
     
+    // Declare Vars
+    
     var widget: Widget? {
         didSet {
             configureWidget()
@@ -94,6 +96,8 @@ class WidgetChartView: UIViewController, ChartViewDelegate {
         
         configureAlertController()
     }
+    
+    // Charts
     
     private func setupPieChart() {
         contentView.addSubview(pieChart)

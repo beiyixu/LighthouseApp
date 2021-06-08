@@ -9,11 +9,15 @@ import UIKit
 
 class PlaceholderTextView: UITextView {
     
+    // Declare Vars
+    
     let placeholderLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor.lightGray
         return label
     }()
+    
+    // Methods
     
     override init(frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: frame, textContainer: textContainer)

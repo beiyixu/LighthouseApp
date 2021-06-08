@@ -10,6 +10,8 @@ import Firebase
 
 class UserSearchController: UICollectionViewController {
     
+    // Declare Vars
+    
     private let searchBar: UISearchBar = {
         let sb = UISearchBar()
         sb.placeholder = "Enter username"
@@ -24,6 +26,8 @@ class UserSearchController: UICollectionViewController {
     
     private var users = [User]()
     private var filteredUsers = [User]()
+    
+    // Main
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -114,7 +118,6 @@ class UserSearchController: UICollectionViewController {
     }
 }
 
-//MARK: - UICollectionViewDelegateFlowLayout
 
 extension UserSearchController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -122,7 +125,6 @@ extension UserSearchController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-//MARK: - UISearchBarDelegate
 
 extension UserSearchController: UISearchBarDelegate {
     

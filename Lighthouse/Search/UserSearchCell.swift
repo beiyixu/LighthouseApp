@@ -8,6 +8,9 @@
 import UIKit
 
 class UserSearchCell: UICollectionViewCell {
+    
+    // Declare Vars
+    
     var user: User? {
         didSet {
             configureCell()
@@ -85,6 +88,8 @@ class UserSearchCell: UICollectionViewCell {
         verified.widthAnchor.constraint(equalTo: verified.heightAnchor).isActive = true
         
     }
+    
+    // View
     
     private func configureCell() {
         guard let user = user else { return }

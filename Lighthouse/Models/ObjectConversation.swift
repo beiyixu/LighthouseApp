@@ -8,6 +8,8 @@
 import Foundation
 
 class ObjectConversation: FireCodable {
+    
+    // Declare Vars
   
   var id = UUID().uuidString
   var userIDs = [String]()
@@ -24,6 +26,8 @@ class ObjectConversation: FireCodable {
     try container.encode(isRead, forKey: .isRead)
   }
   
+    // Object
+    
   init() {}
   
   public required convenience init(from decoder: Decoder) throws {

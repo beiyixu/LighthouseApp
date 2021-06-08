@@ -10,16 +10,14 @@ import UIKit
 
 class ConversationCell: UITableViewCell {
   
-  //MARK: IBOutlets
+    // Declare Vars
   @IBOutlet weak var profilePic: UIImageView!
   @IBOutlet weak var nameLabel: UILabel!
   @IBOutlet weak var messageLabel: UILabel!
   @IBOutlet weak var timeLabel: UILabel!
-  
-  //MARK: Private properties
   let userID = UserManager().currentUserID() ?? ""
   
-  //MARK: Public methods
+  // Methods
   func set(_ conversation: ObjectConversation) {
     timeLabel.text = DateService.shared.format(Date(timeIntervalSince1970: TimeInterval(conversation.timestamp)))
     messageLabel.text = conversation.lastMessage
@@ -40,8 +38,7 @@ class ConversationCell: UITableViewCell {
       self?.profilePic.setImage(url: URL(string: urlString))
     }
   }
-  
-  //MARK: Lifecycle
+    
   override func prepareForReuse() {
     super.prepareForReuse()
     profilePic.cancelDownload()

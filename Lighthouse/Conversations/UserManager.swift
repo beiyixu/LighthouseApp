@@ -9,6 +9,8 @@
 import FirebaseAuth
 
 class UserManager {
+    
+    // Declare Vars
   
   private let service = FirestoreService()
   

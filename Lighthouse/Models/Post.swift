@@ -9,6 +9,8 @@ import Foundation
 
 struct Post {
     
+    // Declare Vars
+    
     var id: String
     
     let user: User

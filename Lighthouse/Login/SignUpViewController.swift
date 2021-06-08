@@ -10,6 +10,8 @@ import Firebase
 
 class SignUpController: UIViewController, UINavigationControllerDelegate, UITextViewDelegate {
 
+    // Declare Vars
+    
     private let plusPhotoButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(#imageLiteral(resourceName: "plus_photo").withRenderingMode(.alwaysOriginal), for: .normal)
@@ -122,6 +124,8 @@ class SignUpController: UIViewController, UINavigationControllerDelegate, UIText
     
     private var profileImage: UIImage?
     
+    // Main
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -142,6 +146,8 @@ class SignUpController: UIViewController, UINavigationControllerDelegate, UIText
         setupInputFields()
         
     }
+    
+    // Methods
     
     private func setupInputFields() {
         termsButton.widthAnchor.constraint(equalToConstant: 40).isActive = true

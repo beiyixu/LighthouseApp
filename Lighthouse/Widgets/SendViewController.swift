@@ -11,6 +11,8 @@ import Firebase
 
 class SendViewController: UIViewController {
     
+    // Declare Variables
+    
     private let textView: PlaceholderTextView = {
         let tv = PlaceholderTextView()
         tv.placeholderLabel.text = "Share Something..."
@@ -39,6 +41,8 @@ class SendViewController: UIViewController {
         containerView.addSubview(textView)
         textView.anchor(top: containerView.topAnchor, left: containerView.leftAnchor, bottom: containerView.bottomAnchor, right: containerView.rightAnchor)
     }
+    
+    // Methods
     
     @objc private func handleShare() {
         guard let caption = textView.text else { return }

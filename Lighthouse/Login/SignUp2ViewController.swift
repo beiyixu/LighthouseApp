@@ -10,6 +10,8 @@ import Firebase
 
 class SignUp2Controller: UIViewController {
     
+    // Declare Vars
+    
     private lazy var firstNameTextField: UITextField = {
         let tf = UITextField()
         tf.autocorrectionType = .no
@@ -123,6 +125,8 @@ class SignUp2Controller: UIViewController {
         
         
     }
+    
+    // Methods
     
     @objc private func handleTapOnView(_ sender: UITextField) {
         firstNameTextField.resignFirstResponder()

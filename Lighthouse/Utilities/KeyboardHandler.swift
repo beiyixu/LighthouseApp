@@ -13,6 +13,9 @@ protocol KeyboardHandler: UIViewController {
 }
 
 extension KeyboardHandler {
+    
+    // Methods
+    
   func addKeyboardObservers(_ completion: CompletionObject<Bool>? = nil) {
     NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: nil) {[weak self] (notification) in
       self?.handleKeyboard(notification: notification)

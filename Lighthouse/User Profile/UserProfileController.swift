@@ -10,6 +10,8 @@ import Firebase
 
 class UserProfileController: HomePostCellViewController {
     
+    // Declare Vars
+    
     var user: User? {
         didSet {
             configureUser()
@@ -22,9 +24,6 @@ class UserProfileController: HomePostCellViewController {
         let ac = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         return ac
     }()
-    
-//    private var isFinishedPaging = false
-//    private var pagingCount: Int = 4
     
     private var isGridView: Bool = false
     
@@ -61,6 +60,8 @@ class UserProfileController: HomePostCellViewController {
         
         configureAlertController()
     }
+    
+    // Methods
     
     private func configureAlertController() {
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)

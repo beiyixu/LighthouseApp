@@ -9,6 +9,7 @@ import UIKit
 
 class HomeEmptyStateView: UIView {
     
+    // Declare Vars
     
     private let noPostsLabel: UILabel = {
         let label = UILabel()

@@ -9,6 +9,8 @@
 import Foundation
 
 class MessageManager {
+    
+    // Declare Vars
   
   let service = FirestoreService()
   

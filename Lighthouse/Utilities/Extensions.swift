@@ -10,6 +10,8 @@ import CoreLocation
 import Kingfisher
 
 extension UIStoryboard {
+    
+    // Methods
   
   class func controller<T: UIViewController>(storyboard: StoryboardEnum) -> T {
     return UIStoryboard(name: storyboard.rawValue, bundle: nil).instantiateViewController(withIdentifier: T.className) as! T
@@ -29,6 +31,8 @@ extension UIStoryboard {
 }
 
 extension Dictionary {
+    
+    // Methods
   
   var data: Data? {
     return try? JSONSerialization.data(withJSONObject: self, options: .prettyPrinted)
@@ -37,6 +41,8 @@ extension Dictionary {
 
 
 extension String {
+    
+    // Methods
   
   func isValidEmail() -> Bool {
     let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
@@ -57,6 +63,8 @@ extension String {
 
 
 extension UIFont {
+    
+    // Methods
   
   var bold: UIFont {
     return with(traits: .traitBold)
@@ -79,6 +87,8 @@ extension UIFont {
 
 extension UIColor {
     
+    // Methods
+    
     static var mainBlue = UIColor.rgb(red: 27, green: 75, blue: 136)
     
     static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
@@ -87,6 +97,8 @@ extension UIColor {
 }
 
 extension UITableView {
+    
+    // Methods
   
   func scroll(to: Position, animated: Bool) {
     let sections = numberOfSections
@@ -115,6 +127,9 @@ extension UITableView {
 
 
 extension Encodable {
+    
+    // Methods
+    
   var values: [String: Any]? {
     guard let data = try? JSONEncoder().encode(self) else { return nil }
     return (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)).flatMap { $0 as? [String: Any] }
@@ -122,6 +137,8 @@ extension Encodable {
 }
 
 extension UIImageView {
+    
+    // Methods
   
   func setImage(url: URL?, completion: CompletionObject<UIImage?>? = nil) {
     kf.setImage(with: url, completionHandler:  { result in
@@ -140,6 +157,8 @@ extension UIImageView {
 }
 
 extension UIImage {
+    
+    // Methods
   
   func fixOrientation() -> UIImage {
     if (imageOrientation == .up) { return self }
@@ -205,6 +224,9 @@ extension UIImage {
 }
 
 extension UIView {
+    
+    // Methods
+    
     @IBInspectable var cornerRadius: CGFloat {
       get {
         return layer.cornerRadius
@@ -316,6 +338,8 @@ extension UIView {
 
 extension Date {
     
+    // Methods
+    
     func timeAgoDisplay() -> String {
         let secondsAgo = Int(Date().timeIntervalSince(self))
         
@@ -386,6 +410,9 @@ extension Date {
 }
 
 extension NSNotification.Name {
+    
+    // Methods
+    
     static var updateHomeFeed = NSNotification.Name(rawValue: "updateFeed")
     static var updateUserProfileFeed = NSNotification.Name(rawValue: "updateUserProfileFeed")
     static var updateConvos = NSNotification.Name(rawValue: "updateConvos")
@@ -403,6 +430,9 @@ public enum FirestoreResponse {
 }
 
 extension Optional {
+    
+    // Methods
+    
   var isNone: Bool {
     return self == nil
   }
@@ -413,6 +443,8 @@ extension Optional {
 }
 
 extension  CLLocationCoordinate2D {
+    
+    // Methods
   
   var string: String {
     return "\(latitude):\(longitude)"
@@ -421,12 +453,17 @@ extension  CLLocationCoordinate2D {
 }
 
 extension NSObject {
+    
+    // Methods
+    
   class var className: String {
     return String(describing: self.self)
   }
 }
 
 extension UIViewController {
+    
+    // Methods
   
   func showAlert(title: String = "Error", message: String = "Something went wrong", completion: EmptyCompletion? = nil) {
     let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)

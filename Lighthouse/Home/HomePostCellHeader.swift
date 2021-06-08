@@ -13,6 +13,8 @@ protocol HomePostCellHeaderDelegate {
 }
 
 class HomePostCellHeader: UIView {
+    
+    // Declare Vars
 
     var user: User? {
         didSet {
@@ -60,6 +62,8 @@ class HomePostCellHeader: UIView {
         i.isHidden = true
         return i
     }()
+    
+    // Main
     
     override init(frame: CGRect) {
         super.init(frame: frame)

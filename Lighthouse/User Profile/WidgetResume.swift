@@ -10,6 +10,8 @@ import PDFKit
 import Firebase
 
 class WidgetResume: UIViewController {
+    
+    // Declare Vars
 
     var widget: Widget? {
         didSet {

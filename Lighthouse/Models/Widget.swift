@@ -10,6 +10,8 @@ import MapKit
 
 struct Widget {
     
+    // Declare Vars
+    
     var id: String
     
     let user: User

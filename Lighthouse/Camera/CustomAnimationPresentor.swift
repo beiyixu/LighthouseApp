@@ -9,6 +9,9 @@
 import UIKit
 
 class CustomAnimationPresentor: NSObject, UIViewControllerAnimatedTransitioning {
+    
+    // Utility
+    
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.5
     }

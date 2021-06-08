@@ -17,6 +17,8 @@ protocol HomePostCellDelegate {
 
 class HomePostCell: UICollectionViewCell {
     
+    // Declare Vars
+    
     var delegate: HomePostCellDelegate?
     
     var post: Post? {
@@ -138,6 +140,8 @@ class HomePostCell: UICollectionViewCell {
       
         
     }
+    
+    // Methods
     
     
     private func setupActionButtons() {

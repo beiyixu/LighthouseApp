@@ -9,6 +9,8 @@ import UIKit
 import Photos
 
 class ImagePickerService: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    // Methods
   
   private lazy var picker: UIImagePickerController = {
     let picker = UIImagePickerController()

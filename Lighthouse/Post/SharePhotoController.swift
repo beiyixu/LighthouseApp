@@ -9,6 +9,8 @@ import UIKit
 import Firebase
 
 class SharePhotoController: UIViewController {
+    
+    // Declare Vars
 
     var selectedImage: UIImage? {
         didSet {

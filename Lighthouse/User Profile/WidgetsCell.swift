@@ -18,6 +18,8 @@ protocol WidgetsCellDelegate {
 
 class WidgetsCell: UICollectionViewCell {
     
+    // Declare Vars
+    
     var delegate: WidgetsCellDelegate?
     
     var widget: Widget? {

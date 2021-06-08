@@ -14,6 +14,8 @@ protocol CommentCellDelegate {
 
 class CommentCell: UICollectionViewCell {
     
+    // Declare Vars
+    
     var comment: Comment? {
         didSet {
             configureComment()
@@ -67,6 +69,8 @@ class CommentCell: UICollectionViewCell {
         addSubview(separatorView)
         separatorView.anchor(top: nil, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, height: 0.5)
     }
+    
+    // Methods
     
     private func configureComment() {
         guard let comment = comment else { return }

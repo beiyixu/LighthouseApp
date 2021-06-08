@@ -9,11 +9,13 @@
 
 import UIKit
 
-protocol MessageTableViewCellDelegate: class {
+protocol MessageTableViewCellDelegate: AnyObject {
   func messageTableViewCellUpdate()
 }
 
 class MessageTableViewCell: UITableViewCell {
+    
+    // Declare Vars
   
   @IBOutlet weak var profilePic: UIImageView?
   @IBOutlet weak var messageTextView: UITextView?

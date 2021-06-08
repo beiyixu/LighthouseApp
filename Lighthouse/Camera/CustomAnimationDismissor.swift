@@ -9,6 +9,7 @@
 import UIKit
 
 class CustomAnimationDismissor: NSObject, UIViewControllerAnimatedTransitioning {
+    // Utility
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.5
     }

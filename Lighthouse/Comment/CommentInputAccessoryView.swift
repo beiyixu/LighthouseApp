@@ -13,6 +13,8 @@ protocol CommentInputAccessoryViewDelegate {
 }
 
 class CommentInputAccessoryView: UIView, UITextViewDelegate {
+    
+    // Declare Vars
 
     var delegate: CommentInputAccessoryViewDelegate?
     

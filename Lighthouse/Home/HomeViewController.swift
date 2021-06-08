@@ -10,6 +10,8 @@ import Firebase
 
 class HomeController: HomePostCellViewController {
     
+    // Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavigationBar()

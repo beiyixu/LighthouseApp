@@ -11,6 +11,7 @@ import MapKit
 
 extension Auth {
     //MARK: Auth
+    
     func createUser(withEmail email: String, username: String, password: String, image: UIImage?, completion: @escaping (Error?) -> ()) {
         
         Auth.auth().createUser(withEmail: email, password: password, completion: { (user, err) in
@@ -608,7 +609,7 @@ extension Database {
   
     
     func fetchWidget(withUID uid: String, widgetId: String, completion: @escaping (Widget) -> (), withCancel cancel: ((Error) -> ())? = nil) {
-        guard let currentLoggedInUser = Auth.auth().currentUser?.uid else { return }
+        guard (Auth.auth().currentUser?.uid) != nil else { return }
         
         let ref = Database.database().reference().child("widgets").child(uid).child(widgetId)
         

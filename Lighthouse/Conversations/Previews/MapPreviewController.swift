@@ -10,6 +10,8 @@ import UIKit
 import MapKit
 
 class MapPreviewController: UIViewController {
+    
+    // Declare Vars
   
   @IBOutlet weak var mapView: MKMapView!
   var locationString: String?
@@ -17,6 +19,8 @@ class MapPreviewController: UIViewController {
   @IBAction func closePressed(_ sender: Any) {
     dismiss(animated: true, completion: nil)
   }
+    
+    // Methods
   
   override func viewDidLoad() {
     super.viewDidLoad()

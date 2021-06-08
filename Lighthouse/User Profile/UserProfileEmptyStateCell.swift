@@ -8,6 +8,9 @@
 import UIKit
 
 class UserProfileEmptyStateCell: UICollectionViewCell {
+    
+    // Declare Vars
+    
     private let noPostsLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 14)

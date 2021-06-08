@@ -10,6 +10,8 @@ import UIKit
 import Photos
 
 class PreviewPhotoContainerView: UIView {
+    
+    // Declare Vars
 
     let previewImageView: UIImageView = {
         let iv = UIImageView()

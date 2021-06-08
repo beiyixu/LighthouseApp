@@ -10,6 +10,8 @@ import Firebase
 
 class WidgetView: UIViewController {
     
+    // Declare Vars
+    
     var widget: Widget? {
         didSet {
             configureWidget()
@@ -45,6 +47,8 @@ class WidgetView: UIViewController {
         let ac = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         return ac
     }()
+    
+    // Main
     
     override var canBecomeFirstResponder: Bool { return true }
     
@@ -117,6 +121,8 @@ class WidgetView: UIViewController {
         })
         return action
     }
+    
+    // Methods
     
     @objc private func handleSettings() {
         present(alertController, animated: true, completion: nil)

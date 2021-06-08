@@ -16,6 +16,8 @@ protocol UserProfileTextGridCellDelegate {
 
 class UserProfileTextGridCell: UICollectionViewCell {
     
+    // Declare Vars
+    
     var delegate: UserProfileTextGridCellDelegate?
     
     var post: Post? {
@@ -108,7 +110,8 @@ class UserProfileTextGridCell: UICollectionViewCell {
         likeCounter.anchor(top: captionLabel.bottomAnchor, left: leftAnchor, paddingTop: padding, paddingLeft: padding)
       
     }
-  
+    
+    // Methods
     
     private func setActionButtons() {
         addSubview(likeButton)

@@ -8,6 +8,8 @@
 import UIKit
 
 class UILabelGradient: UILabel {
+    
+    // Gradient IB
   
     @IBInspectable var leftColor: UIColor = .mainBlue {
     didSet {

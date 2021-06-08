@@ -10,6 +10,8 @@ import MapKit
 import Firebase
 
 class WidgetLocation: UIViewController {
+    
+    // Declare Vars
 
     private let mapView = MKMapView()
     var locationString: String? {
@@ -27,6 +29,8 @@ class WidgetLocation: UIViewController {
         let ac = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         return ac
     }()
+    
+    // Main
     
     override func viewDidLoad() {
         super.viewDidLoad()

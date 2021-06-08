@@ -9,6 +9,8 @@ import UIKit
 
 class UserProfilePhotoGridCell: UICollectionViewCell {
     
+    // Declare Vars
+    
     var post: Post? {
         didSet {
             guard let imageUrl = post?.imageUrl else { return }

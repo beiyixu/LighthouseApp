@@ -8,6 +8,8 @@
 import Foundation
 
 class DateService {
+    
+    // Methods
   
   static let shared = DateService()
   private let dateFormatter: DateFormatter = {

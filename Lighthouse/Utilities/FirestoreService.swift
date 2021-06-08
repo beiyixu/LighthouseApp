@@ -9,9 +9,13 @@ import FirebaseFirestore
 import Firebase
 
 class FirestoreService {
+    
+    // Declare Vars
   
   private var listener: ListenerRegistration?
   
+    // Methods
+    
   func configure() {
     FirebaseApp.configure()
   }

@@ -8,11 +8,13 @@
 
 import UIKit
 
-protocol ContactsPreviewControllerDelegate: class {
+protocol ContactsPreviewControllerDelegate: AnyObject {
   func contactsPreviewController(didSelect user: ObjectUser)
 }
 
 class ContactsPreviewController: UIViewController {
+    
+    // Declare Vars
   
   @IBOutlet weak var collectionView: UICollectionView!
   weak var delegate: ContactsPreviewControllerDelegate?
@@ -41,6 +43,7 @@ class ContactsPreviewController: UIViewController {
 }
 
 extension ContactsPreviewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+    // Collection View
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return users.count
@@ -73,10 +76,14 @@ extension ContactsPreviewController: UICollectionViewDelegateFlowLayout, UIColle
 
 
 class ContactsCell: UICollectionViewCell {
+    
+    // Declare Vars
   
   @IBOutlet weak var profilePic: UIImageView!
   @IBOutlet weak var nameLabel: UILabel!
   
+    // Reuse Methods
+    
   override func prepareForReuse() {
     super.prepareForReuse()
     profilePic.cancelDownload()

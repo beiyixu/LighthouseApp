@@ -12,6 +12,8 @@ import Photos
 
 class CameraController: UIViewController {
     
+    // Declare Vars
+    
     private var selectedImage : UIImage?
     
     private let nextButton: UIButton = {

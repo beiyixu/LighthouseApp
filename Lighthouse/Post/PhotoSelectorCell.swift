@@ -8,6 +8,8 @@
 import UIKit
 
 class PhotoSelectorCell: UICollectionViewCell {
+    
+    // Declare Vars
     let photoImageView: UIImageView = {
         let iv = UIImageView()
         iv.backgroundColor = .lightGray

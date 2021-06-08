@@ -9,6 +9,8 @@ import UIKit
 import Firebase
 
 class LoginController: UIViewController {
+    
+    // Declare Vars
 
     private let logoContainerView: UIView = {
         let container = UIView()
@@ -149,6 +151,8 @@ class LoginController: UIViewController {
         
         setupInputFields()
     }
+    
+    // Methods
     
     private func setupInputFields() {
         let stackView = UIStackView(arrangedSubviews: [label, emailTextField, passwordTextField, loginButton])

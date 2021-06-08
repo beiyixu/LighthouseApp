@@ -8,6 +8,9 @@
 import UIKit
 
 struct System {
+    
+    // Methods
+    
     static func clearNavigationBar(forBar navBar: UINavigationBar) {
         navBar.setBackgroundImage(UIImage(), for: .default)
         navBar.shadowImage = UIImage()

@@ -21,7 +21,7 @@ class HomePostCellViewController: UICollectionViewController, HomePostCellDelega
     
     func showEmptyStateViewIfNeeded() {}
     
-    //MARK: - HomePostCellDelegate
+    // Methods
     
     func didTapResume(widget: Widget) {
         let controller = WidgetResume()

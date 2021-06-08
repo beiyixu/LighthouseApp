@@ -9,6 +9,8 @@ import FirebaseStorage
 import UIKit
 
 class FirestorageService {
+    
+    // Methods
   
   func update<T>(_ object: T, reference: FirestoreCollectionReference, completion: @escaping CompletionObject<FirestoreResponse>) where T: FireStorageCodable {
     guard let imageData = object.profilePic?.scale(to: CGSize(width: 350, height: 350))?.jpegData(compressionQuality: 0.3) else { completion(.success); return }

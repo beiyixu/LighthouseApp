@@ -8,7 +8,6 @@
 import UIKit
 import Firebase
 
-//MARK: - UserProfileHeaderDelegate
 
 protocol UserProfileHeaderDelegate {
     func didChangeToListView()
@@ -17,9 +16,10 @@ protocol UserProfileHeaderDelegate {
     func didPressEdit()
 }
 
-//MARK: - UserProfileHeader
 
 class UserProfileHeader: UICollectionViewCell {
+    
+    // Declare Vars
    
     var delegate: UserProfileHeaderDelegate?
     
@@ -177,6 +177,8 @@ class UserProfileHeader: UICollectionViewCell {
         bioLabel.centerXAnchor.constraint(equalTo: self.profileImageView.centerXAnchor).isActive = true
            
     }
+    
+    // Methods
     
     private func layoutUserStatsView() {
         let stackView = UIStackView(arrangedSubviews: [postsLabel, followersLabel, followingLabel])

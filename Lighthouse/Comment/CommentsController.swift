@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 
 class CommentsController: UICollectionViewController {
+    
+    // Declare Vars
 
     var post: Post? {
         didSet {
@@ -51,10 +53,14 @@ class CommentsController: UICollectionViewController {
         tabBarController?.tabBar.isHidden = true
     }
     
+    // Main
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         tabBarController?.tabBar.isHidden = false
     }
+    
+    // Methods
     
     @objc private func fetchComments() {
         guard let postId = post?.id else { return }
@@ -99,7 +105,6 @@ extension CommentsController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-//MARK: - CommentInputAccessoryViewDelegate
 
 extension CommentsController: CommentInputAccessoryViewDelegate {
     func didSubmit(comment: String) {
@@ -114,7 +119,6 @@ extension CommentsController: CommentInputAccessoryViewDelegate {
     }
 }
 
-//MARK: - CommentCellDelegate
 
 extension CommentsController: CommentCellDelegate {
     func didTapUser(user: User) {

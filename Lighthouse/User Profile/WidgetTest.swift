@@ -10,6 +10,8 @@ import Charts
 import Firebase
 
 class WidgetTest: UIViewController, ChartViewDelegate {
+    
+    // Declare Vars
 
     var widget: Widget? {
         didSet {
@@ -74,6 +76,8 @@ class WidgetTest: UIViewController, ChartViewDelegate {
         l.borderColor = .mainBlue
         return l
     }()
+    
+    // Main
     
     override func viewDidLoad() {
         super.viewDidLoad()

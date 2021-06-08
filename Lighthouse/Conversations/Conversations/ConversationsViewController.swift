@@ -10,20 +10,20 @@ import UIKit
 
 class ConversationsViewController: UIViewController {
   
-  //MARK: IBOutlets
+    // Declare Vars
+    
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var profileImageView: UIImageView!
   override var preferredStatusBarStyle: UIStatusBarStyle {
     return .default
   }
   
-  //MARK: Private properties
   private var conversations = [ObjectConversation]()
   private let manager = ConversationManager()
   private let userManager = UserManager()
   private var currentUser: ObjectUser?
   
-  //MARK: Lifecycle
+  // Methods
     
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -50,7 +50,6 @@ class ConversationsViewController: UIViewController {
   
 }
 
-//MARK: IBActions
 extension ConversationsViewController {
   
   @IBAction func composePressed(_ sender: Any) {
@@ -60,7 +59,6 @@ extension ConversationsViewController {
   }
 }
 
-//MARK: Private methods
 extension ConversationsViewController {
   
   @objc func fetchConversations() {
@@ -91,7 +89,6 @@ extension ConversationsViewController {
   }
 }
 
-//MARK: UITableView Delegate & DataSource
 extension ConversationsViewController: UITableViewDelegate, UITableViewDataSource {
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -130,8 +127,6 @@ extension ConversationsViewController: UITableViewDelegate, UITableViewDataSourc
   }
 }
 
-
-//MARK: ContactsPreviewController Delegate
 extension ConversationsViewController: ContactsPreviewControllerDelegate {
   func contactsPreviewController(didSelect user: ObjectUser) {
     guard let currentID = userManager.currentUserID() else { return }

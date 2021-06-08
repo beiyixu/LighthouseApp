@@ -9,6 +9,8 @@
 import UIKit
 
 class ObjectMessage: FireStorageCodable {
+    
+    // Declare Vars
   
   var id = UUID().uuidString
   var message: String?
@@ -30,6 +32,8 @@ class ObjectMessage: FireStorageCodable {
     try container.encodeIfPresent(content, forKey: .content)
   }
   
+    // Object
+    
   init() {}
   
   public required convenience init(from decoder: Decoder) throws {

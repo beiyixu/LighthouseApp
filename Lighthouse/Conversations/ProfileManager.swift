@@ -9,6 +9,8 @@
 import Foundation
 
 class ProfileManager {
+    
+    // Declare Vars
   
   static let shared = ProfileManager()
   private var users = [ObjectUser]()

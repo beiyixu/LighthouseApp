@@ -10,6 +10,8 @@ import Firebase
 
 class CreateEventController: UIViewController {
     
+    // Declare Vars
+    
     private var startDatePicker = UIDatePicker()
     private var endDatePicker = UIDatePicker()
     
@@ -55,6 +57,8 @@ class CreateEventController: UIViewController {
     
     override var prefersStatusBarHidden: Bool { return true }
     
+    // Main
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.rgb(red: 241, green: 241, blue: 241)
@@ -63,6 +67,8 @@ class CreateEventController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(handleCancel))
         layoutViews()
     }
+    
+    // Methods
     
     private func layoutViews() {
         let containerView = UIView()

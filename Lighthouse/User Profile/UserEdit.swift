@@ -10,6 +10,8 @@ import Firebase
 
 class UserEdit: UIViewController, UINavigationControllerDelegate {
     
+    // Declare Vars
+    
     var user: User? {
         didSet {
             reloadData()
@@ -152,6 +154,8 @@ class UserEdit: UIViewController, UINavigationControllerDelegate {
     
     private var profileImage: UIImage?
     
+    // Main
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -201,6 +205,8 @@ class UserEdit: UIViewController, UINavigationControllerDelegate {
         view.addSubview(stackview5)
         stackview5.anchor(top: plusPhotoButton.bottomAnchor, left: view.safeAreaLayoutGuide.leftAnchor, right: view.safeAreaLayoutGuide.rightAnchor, paddingTop: 10, paddingLeft: 20, paddingRight: 20, height: 350)
     }
+    
+    // Methods
     
     
     @objc private func handleSave() {

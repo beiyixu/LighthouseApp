@@ -9,6 +9,8 @@ import Foundation
 
 struct User {
     
+    // Declare Vars
+    
     let uid: String
     let username: String
     let profileImageUrl: String?

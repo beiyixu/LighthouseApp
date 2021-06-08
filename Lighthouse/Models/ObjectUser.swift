@@ -8,6 +8,8 @@
 import UIKit
 
 class ObjectUser: FireStorageCodable {
+    
+    // Declare Vars
   
   var id = UUID().uuidString
   var name: String?
@@ -27,6 +29,8 @@ class ObjectUser: FireStorageCodable {
   }
   
   init() {}
+    
+    // Object
   
   public required convenience init(from decoder: Decoder) throws {
     self.init()

@@ -11,6 +11,8 @@ import Photos
 private let reuseIdentifier = "Cell"
 
 class PhotoSelectorController: UICollectionViewController {
+    
+    // Declare Vars
 
     private var selectedImage : UIImage?
     private var images = [UIImage]()
@@ -77,6 +79,8 @@ class PhotoSelectorController: UICollectionViewController {
             }
         }
     }
+    
+    // Methods
     
     @objc private func handleCancel() {
         dismiss(animated: true, completion: nil)

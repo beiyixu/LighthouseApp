@@ -9,10 +9,10 @@ import Foundation
 import Firebase
 
 class ConversationManager {
+    
+    // Declare Vars
   
   let service = FirestoreService()
-    
-
   
   func currentConversations(_ completion: @escaping CompletionObject<[ObjectConversation]>) {
     guard let userID = UserManager().currentUserID() else { return }

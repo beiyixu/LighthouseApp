@@ -9,6 +9,8 @@
 import UIKit
 
 class ImagePreviewController: UIViewController, UIScrollViewDelegate {
+    
+    // Declare Vars
   
   @IBOutlet weak var imageView: UIImageView!
   @IBOutlet weak var scrollView: UIScrollView!
@@ -25,6 +27,8 @@ class ImagePreviewController: UIViewController, UIScrollViewDelegate {
     }
     scrollView.setZoomScale(1, animated: true)
   }
+    
+    // Methods
   
   private func zoomRectForScale(scale: CGFloat, center: CGPoint) -> CGRect {
     var zoomRect = CGRect.zero

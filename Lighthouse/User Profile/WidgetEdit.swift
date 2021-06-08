@@ -9,6 +9,8 @@ import UIKit
 import Firebase
 
 class WidgetEdit: UIViewController {
+    
+    // Declare Vars
 
     var widget: Widget? {
         didSet {
@@ -668,6 +670,8 @@ class WidgetEdit: UIViewController {
     private let contentView = UIView()
     private let graphView = UIView()
     
+    // Main
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapOnView)))
@@ -849,6 +853,8 @@ class WidgetEdit: UIViewController {
     
     }
     }
+    
+    // Methods
     
     @objc private func handleTapOnView(_ sender: UITextField) {
         textView.resignFirstResponder()

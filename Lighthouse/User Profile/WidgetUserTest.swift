@@ -9,6 +9,8 @@ import UIKit
 import Firebase
 
 class WidgetUserTest: UIViewController {
+    
+    // Declare Vars
 
     var widget: Widget? {
         didSet {
@@ -122,6 +124,8 @@ class WidgetUserTest: UIViewController {
     
     override var canBecomeFirstResponder: Bool { return true }
     
+    // Main
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Widget"
@@ -187,6 +191,8 @@ class WidgetUserTest: UIViewController {
         configureAlertController()
         
     }
+    
+    // Methods
     
     
     private func configureAlertController() {

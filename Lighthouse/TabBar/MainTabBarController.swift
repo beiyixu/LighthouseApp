@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 class MainTabBarController: UITabBarController {
-    
+    // Main
     override func viewDidLoad() {
         super.viewDidLoad()
         tabBar.tintColor = UIColor.mainBlue
@@ -24,7 +24,7 @@ class MainTabBarController: UITabBarController {
             setupViewControllers()
         }
     }
-    
+    // View Cont.
     func setupViewControllers() {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         let homeNavController = self.templateNavController(unselectedImage: #imageLiteral(resourceName: "home_unselected"), selectedImage: #imageLiteral(resourceName: "home_selected"), rootViewController: HomeController(collectionViewLayout: UICollectionViewFlowLayout()))

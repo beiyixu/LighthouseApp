@@ -17,6 +17,8 @@ protocol HomeEventCellDelegate {
 
 class HomeEventCell: UICollectionViewCell {
     
+    // Declare Vars
+    
     var delegate: HomeEventCellDelegate?
     
     var post: Post? {
@@ -129,6 +131,8 @@ class HomeEventCell: UICollectionViewCell {
         likeCounter.anchor(top: captionLabel.bottomAnchor, left: leftAnchor, paddingTop: padding, paddingLeft: padding)
       
     }
+    
+    //Methods
   
     
     private func setActionButtons() {

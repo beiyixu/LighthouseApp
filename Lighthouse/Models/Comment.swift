@@ -9,6 +9,8 @@ import Foundation
 
 struct Comment {
     
+    // Declare Vars
+    
     let user: User
     let text: String
     let creationDate: Date
@@ -26,6 +28,8 @@ struct Comment {
 }
 
 struct Conversation {
+    
+    // Declare Vars
     
     let user: User
     let text: String

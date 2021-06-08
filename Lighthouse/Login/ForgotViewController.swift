@@ -9,6 +9,8 @@ import UIKit
 import Firebase
 
 class ForgotViewController: UIViewController {
+    
+    // Declare Vars
 
     private let forgotLabel: UILabel = {
         let l = UILabel()
@@ -68,6 +70,8 @@ class ForgotViewController: UIViewController {
         stackView.anchor(left: view.leftAnchor, right: view.rightAnchor, paddingLeft: 10, paddingRight: 10, height: 200)
         stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
+    
+    // Methods
     
     @objc private func handleTapOnView(_ sender: UITextField) {
         emailTextField.resignFirstResponder()

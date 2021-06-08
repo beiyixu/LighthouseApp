@@ -9,6 +9,8 @@ import UIKit
 import Firebase
 
 class plusController: UIViewController {
+    
+    // Declare Vars
 
     private let postPhotoButton: UIButton = {
         let button = UIButton(type: .system)
@@ -76,12 +78,16 @@ class plusController: UIViewController {
         return button
     }()
     
+    // Main
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigation()
         layoutViews()
        retrieveUser()
     }
+    
+    // Methods
     
     func setNavigation() {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)

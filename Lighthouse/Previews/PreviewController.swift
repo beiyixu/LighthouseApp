@@ -9,6 +9,8 @@ import UIKit
 
 class PreviewController: UIViewController {
     
+    // Declare Vars
+    
     private let firstImageView: UIImageView = {
         let imageView = UIImageView(image: #imageLiteral(resourceName: "front-logo"))
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -124,6 +126,8 @@ class PreviewController: UIViewController {
         return pc
     }()
     
+    // Main
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
@@ -147,6 +151,8 @@ class PreviewController: UIViewController {
         skipButton.anchor(top: view.topAnchor, right: view.rightAnchor, paddingTop: 40, paddingRight: 20, width: 90, height: 40)
         
     }
+    
+    // Methods
     
     @objc private func pageChanged() {
         if pageControl.currentPage == 0 {
