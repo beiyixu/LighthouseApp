@@ -11,6 +11,6 @@ This is the Lighthouse app!
 To Install, Please Download Test Flight App and Tap the Link Below on an IOS Device!
 https://testflight.apple.com/join/081aldSx
 
-\n
+<br>
 
 If you would like to download the Project, you may choose to sign the app as an individual and run it. Firebase services, however, may not connect due to security restrictions.
